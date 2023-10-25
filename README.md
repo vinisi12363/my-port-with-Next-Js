@@ -1,6 +1,8 @@
-# Next.js & NextUI Template
+# My portfolio with Next.js & NextUI Template
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+**Hello There!**
+</br>
+This is my official portfolio, used to showcase my development skills and web applications. 
 
 ## Technologies Used
 
@@ -14,26 +16,13 @@ This is a template for creating applications using Next.js 13 (app directory) an
 
 ## How to Use
 
+**Download the repository and type:** `npm install`
+**on terminal,  inside in folder.**
 
-### Use the template with create-next-app
 
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
+**Run the development server with** `npm run dev` 
+**and look your browser**
+ 
 
 ## License
 
