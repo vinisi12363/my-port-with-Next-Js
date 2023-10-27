@@ -101,7 +101,7 @@ export default function Home() {
 
 			<div>
 				<h1 className="text-l font-semibold text-slate-200">
-					My name is Vinícius, and i'm a fullstack developer`&apos`
+					My name is Vinícius, and i&apos;m a fullstack developer
 				</h1>
 			</div>
 
@@ -154,7 +154,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[7]} className="capitalize">
 							react
-							<Image src="https://skillicons.dev/icons?i=react"></Image>
+							<Image alt="photo" src="https://skillicons.dev/icons?i=react"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[2]}
@@ -163,7 +163,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							vite
-							<Image src="https://skillicons.dev/icons?i=vite"></Image>
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=vite"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[0]}
@@ -172,7 +172,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							javascript
-							<Image src="https://skillicons.dev/icons?i=js"></Image>
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=js"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[3]}
@@ -181,7 +181,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							Styled Components
-							<Image src="https://skillicons.dev/icons?i=styledcomponents"></Image>
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=styledcomponents"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[0]}
@@ -199,7 +199,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							Node Js
-							<Image src="https://skillicons.dev/icons?i=nodejs"></Image>
+							<Image  alt="photo"  src="https://skillicons.dev/icons?i=nodejs"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[0]}
@@ -209,7 +209,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							Typescript
-							<Image src="https://skillicons.dev/icons?i=ts"></Image>
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=ts"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[4]}
@@ -220,7 +220,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							express
-							<Image src="https://skillicons.dev/icons?i=express"></Image>
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=express"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[9]}
@@ -230,7 +230,7 @@ export default function Home() {
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							postman
-							<Image src="https://skillicons.dev/icons?i=postman"></Image>
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=postman"></Image>
 						</Button>
 					</PopoverTrigger>
 					{content[0]}
