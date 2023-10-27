@@ -6,10 +6,13 @@ import {Content} from "./content";
 
 export default function AboutPage() {
 	return (
-		
-		  
-	  <ScrollShadow hideScrollBar className="w-[300px] h-[400px]">
-		<Content />
-	  </ScrollShadow>
+		<>
+				<h1 className={title()}>Sobre mim</h1>
+			   
+				<ScrollShadow hideScrollBar className="w-[300px] h-[400px] ">
+				<Content />
+				</ScrollShadow>
+		</>
+	
 	);
 }
