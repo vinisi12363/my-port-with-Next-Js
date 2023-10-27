@@ -23,6 +23,7 @@ This is my official portfolio, used to showcase my development skills and web ap
 **Run the development server with** `npm run dev` 
 **and look your browser**
  
+[![Netlify Status](https://api.netlify.com/api/v1/badges/96c8be40-b819-4d02-932c-7bd970cdb32e/deploy-status)](https://app.netlify.com/sites/gorgeous-cendol-f3bea6/deploys) 
 
 ## License
 
