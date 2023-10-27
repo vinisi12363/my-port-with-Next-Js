@@ -89,11 +89,19 @@ export default function Home() {
 	];
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
+			
 
-				<h1 className={title({ color: "green", class: "bg-cliptext text-transparent bg-gradient-to-b" })}>Hello There! </h1>
-				<div><h2>My name is Vinicius, i'm a web developer</h2></div>
-
+				<h1 className={title({ color: "violet", class: "bg-cliptext text-lg font-semibold text-slate-500 text-transparent bg-gradient-to-b " })}>
+				 Hello World!  
+				</h1>
+				
+				<div>
+					<h1 className="text-l font-semibold text-slate-200">
+						My name is Vinícius, and i'm a fullstack developer
+					</h1>
+				</div>
+				
+				<div className="flex flex-wrap align-center max-w-lg justify-center inline-block ml-3 gap-6">
 				<Image
 					width={600}
 					rounded-full
@@ -102,10 +110,13 @@ export default function Home() {
 
 					src="https://so-development.org/wp-content/uploads/2021/11/full-stack-development.gif"
 				/>
-				<div className="inline-block max-w-lg text-center justify-center">
-					<h2 className={subtitle()}> Here someone habilities wich i have</h2>
 				</div>
-				<div className="flex flex-wrap gap-4 ml-3">
+				
+				<div className="inline-block max-w-lg text-center font-sans justify-center">
+
+					<h1 className="text-l font-semibold text-slate-200">Here are some skills I have :</h1>
+				</div>
+				<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
 
 					<Popover key={1} placement="top" color={colors[0]}>
 						<PopoverTrigger>
@@ -195,9 +206,111 @@ export default function Home() {
 
 
 				</div>
+		
+				<h1 className="text-l font-semibold text-slate-300">And have kownedge on this tools:</h1>
+				<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
+							
+				<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								Styled Components
+								<Image src="https://skillicons.dev/icons?i=styledcomponents"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								tailwind
+								<Image src="https://skillicons.dev/icons?i=tailwind"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								nestjs
+								<Image src="https://skillicons.dev/icons?i=nestjs"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								vite
+								<Image src="https://skillicons.dev/icons?i=vite"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								express	
+								<Image src="https://skillicons.dev/icons?i=express"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								postman
+								<Image src="https://skillicons.dev/icons?i=postman"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								docker
+								<Image src="https://skillicons.dev/icons?i=docker"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								jest
+								<Image src="https://skillicons.dev/icons?i=jest"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								next
+								<Image src="https://skillicons.dev/icons?i=next"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
+					<Popover key={1} placement="top" color={colors[0]}>
+						<PopoverTrigger>
+							<Button color={colors[0]} className="capitalize">
+								prisma
+								<Image src="https://skillicons.dev/icons?i=prisma"></Image>
+							</Button>
+						</PopoverTrigger>
+						{content[0]}
+					</Popover>
 
 			</div>
-
+			
+			<div>
+					<h1 className="text-l font-semibold text-slate-200">
+					Take a look at the 'Applications' section if you want to see my professional experience. 💼
+					</h1>
+			</div>
 		</section>
 	);
 }
