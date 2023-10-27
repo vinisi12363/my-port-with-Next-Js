@@ -8,35 +8,35 @@ import {Accordion, AccordionItem} from "@nextui-org/react";
 
 export default function Home() {
 	const content = [
-		<PopoverContent>
+		<PopoverContent key={9}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">html</div>
 				<div className="text-tiny">hypertext language</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent>
+		<PopoverContent key={10}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">CSS</div>
 				<div className="text-tiny">I like your style</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent>
+		<PopoverContent key={11}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">React</div>
 				<div className="text-tiny">I love it! ❤️</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent>
+		<PopoverContent key={12}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Javascript</div>
 				<div className="text-tiny">Extremelly useful</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent>
+		<PopoverContent key={13}>
 
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Typescript</div>
@@ -44,33 +44,33 @@ export default function Home() {
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent>
+		<PopoverContent key={14}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Node Js</div>
 				<div className="text-tiny">everything is possible</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent>
+		<PopoverContent key={15}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">C++</div>
 				<div className="text-tiny">My fisrt contact with programation ❤️</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent>
+		<PopoverContent key={16}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Postgres</div>
 				<div className="text-tiny">My favourite Relational DB</div>
 			</div>
 		</PopoverContent>,
-		<PopoverContent>
+		<PopoverContent key={17}>
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Mongodb</div>
 				<div className="text-tiny">Non-relational db...mongod ... mongosh</div>
 			</div>
 		</PopoverContent>,
-		<PopoverContent>
+		<PopoverContent key={18}>
 		<div className="px-1 py-2">
 			<div className="text-small font-bold">Express</div>
 			<div className="text-tiny">Express be used for management of Routes and async requests</div>
@@ -101,7 +101,7 @@ export default function Home() {
 
 			<div>
 				<h1 className="text-l font-semibold text-slate-200">
-					My name is Vinícius, and i'm a fullstack developer
+					My name is Vinícius, and i'm a fullstack developer`&apos`
 				</h1>
 			</div>
 
