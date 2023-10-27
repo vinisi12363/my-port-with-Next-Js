@@ -51,26 +51,26 @@ export default function Home() {
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent key={15}>
+		<PopoverContent key="15">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">C++</div>
 				<div className="text-tiny">My fisrt contact with programation ❤️</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent key={16}>
+		<PopoverContent key="16">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Postgres</div>
 				<div className="text-tiny">My favourite Relational DB</div>
 			</div>
 		</PopoverContent>,
-		<PopoverContent key={17}>
+		<PopoverContent key="17">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Mongodb</div>
 				<div className="text-tiny">Non-relational db...mongod ... mongosh</div>
 			</div>
 		</PopoverContent>,
-		<PopoverContent key={18}>
+		<PopoverContent key="18">
 		<div className="px-1 py-2">
 			<div className="text-small font-bold">Express</div>
 			<div className="text-tiny">Express be used for management of Routes and async requests</div>
@@ -150,7 +150,7 @@ export default function Home() {
 			</div>
 			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
 
-				<Popover key={1} placement="top" color={colors[7]}>
+				<Popover key="1" placement="top" color={colors[7]}>
 					<PopoverTrigger>
 						<Button color={colors[7]} className="capitalize">
 							react
@@ -159,7 +159,7 @@ export default function Home() {
 					</PopoverTrigger>
 					{content[2]}
 				</Popover>
-				<Popover key={2} placement="top" color={colors[0]}>
+				<Popover key="2" placement="top" color={colors[0]}>
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							vite
@@ -168,7 +168,7 @@ export default function Home() {
 					</PopoverTrigger>
 					{content[0]}
 				</Popover>
-				<Popover key={3} placement="top" color={colors[0]}>
+				<Popover key="3" placement="top" color={colors[0]}>
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							javascript
@@ -177,7 +177,7 @@ export default function Home() {
 					</PopoverTrigger>
 					{content[3]}
 				</Popover>
-				<Popover key={4} placement="top" color={colors[0]}>
+				<Popover key="4" placement="top" color={colors[0]}>
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							Styled Components
@@ -195,7 +195,7 @@ export default function Home() {
 
 			<h1 className="text-l font-semibold text-slate-300">Tecnologies utilized in backend:</h1>
 			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
-				<Popover key={5} placement="top" color={colors[0]}>
+				<Popover key="5" placement="top" color={colors[0]}>
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							Node Js
@@ -205,7 +205,7 @@ export default function Home() {
 					{content[0]}
 				</Popover>
 
-				<Popover key={6} placement="top" color={colors[0]}>
+				<Popover key="6" placement="top" color={colors[0]}>
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							Typescript
@@ -216,7 +216,7 @@ export default function Home() {
 				</Popover>
 
 
-				<Popover key={7} placement="top" color={colors[0]}>
+				<Popover key="7" placement="top" color={colors[0]}>
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							express
@@ -226,7 +226,7 @@ export default function Home() {
 					{content[9]}
 				</Popover>
 
-				<Popover key={8} placement="top" color={colors[0]}>
+				<Popover key="8" placement="top" color={colors[0]}>
 					<PopoverTrigger>
 						<Button color={colors[0]} className="capitalize">
 							postman
