@@ -8,35 +8,35 @@ import {Accordion, AccordionItem} from "@nextui-org/react";
 
 export default function Home() {
 	const content = [
-		<PopoverContent key={9}>
+		<PopoverContent key="9">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">html</div>
 				<div className="text-tiny">hypertext language</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent key={10}>
+		<PopoverContent key="10">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">CSS</div>
 				<div className="text-tiny">I like your style</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent key={11}>
+		<PopoverContent key="11">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">React</div>
 				<div className="text-tiny">I love it! ❤️</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent key={12}>
+		<PopoverContent key="12">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Javascript</div>
 				<div className="text-tiny">Extremelly useful</div>
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent key={13}>
+		<PopoverContent key="13">
 
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Typescript</div>
@@ -44,7 +44,7 @@ export default function Home() {
 			</div>
 		</PopoverContent>,
 
-		<PopoverContent key={14}>
+		<PopoverContent key="14">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Node Js</div>
 				<div className="text-tiny">everything is possible</div>
