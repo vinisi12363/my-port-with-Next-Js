@@ -101,7 +101,7 @@ export default function Homepage() {
 
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
-					My name is Vinícius, and i&apos;m a fullstack developer
+					My name is Vinícius, and I&apos;m a fullstack developer
 				</h1>
 			</div>
 
@@ -118,7 +118,7 @@ export default function Homepage() {
 				/>
 			<div>
 				<h1 className="text-l font-semibold">
-					Take a look on the web applications below, if you want to see my professional experience. 💼
+					Take a look at web applications below, to check my professional experience. 💼
 				</h1>
 			</div>
 			<h1 className="text-l font-semibold ">Afflatus Assistant</h1>
