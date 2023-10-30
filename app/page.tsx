@@ -79,7 +79,7 @@ export default function Home() {
 	]
 	const AccordionContent = [
 		"O Afflatus Assistant é um sistema criado para lidar com o cadastro de clientes e eventos para uma empresa de fotografia infantil. Com ele, é possível cadastrar um cliente (pai/mãe) e seus filhos, além de salvar datas importantes para o cliente, como o batizado do bebê e os primeiros passos, entre outros eventos relevantes. Isso ajuda a empresa de fotografia a impulsionar as vendas e a obter um cadastro completo e seguro de seus clientes.",
-
+		"O My Wallet é um Web App com o objetivo de ajudar o usuário a controlar suas finanças. Com ele, é possível cadastrar entradas e saídas de dinheiro, além de poder ver o saldo atualizado. O My Wallet é um sistema simples, mas que pode ajudar muito o usuário a ter um controle maior sobre suas finanças.",
 	]
 
 	const colors :any= [
@@ -142,7 +142,7 @@ export default function Home() {
 				rounded-full
 				isZoomed
 				alt="Afflatus"
-				src="https://i.imgur.com/hdNkoz8.png"
+				src="/afflatus.png"
 			/>
 
 			<div className="inline-block max-w-lg text-center font-sans justify-center">
@@ -239,6 +239,126 @@ export default function Home() {
 				
 
 			</div>
+		
+
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<h1 className="text-l font-semibold text-slate-200">My Wallet (Mobile Aproach)</h1>
+			<Accordion >
+				<AccordionItem
+				
+					aria-label="MyWallet"
+					subtitle={
+					<span>
+						Click to Expand
+					</span>
+					}
+					title="System Description"
+				>
+					{AccordionContent[1]}
+     		   </AccordionItem>
+
+			</Accordion>
+			<Image
+				
+				rounded-full
+				isZoomed
+				alt="MyWallet"
+				src="/mywallet.png"
+			/>
+
+			<div className="inline-block max-w-lg text-center font-sans justify-center">
+ 				<h1 className="text-l font-semibold text-slate-200">Tecnologies used in frontend:</h1>
+			</div>
+			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
+
+				<Popover key="1" placement="top" color={colors[7]}>
+					<PopoverTrigger>
+						<Button color={colors[7]} className="capitalize">
+							react
+							<Image alt="photo" src="https://skillicons.dev/icons?i=react"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[2]}
+				</Popover>
+			
+				<Popover key="3" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							javascript
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=js"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[3]}
+				</Popover>
+				<Popover key="4" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Styled Components
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=styledcomponents"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[0]}
+				</Popover>
+
+
+
+
+
+			</div>
+
+			<h1 className="text-l font-semibold text-slate-300">Tecnologies utilized in backend:</h1>
+			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
+				<Popover key="5" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Node Js
+							<Image  alt="photo"  src="https://skillicons.dev/icons?i=nodejs"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[0]}
+				</Popover>
+
+				<Popover key="6" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Javascript
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=js"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[4]}
+				</Popover>
+
+
+				<Popover key="7" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							mongodb
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=mongodb"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[8]}
+				</Popover>
+
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							postman
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=postman"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[0]}
+				</Popover>
+				
+				
+
+			</div>
+
+
 
 		</section>
 	);

@@ -8,10 +8,12 @@ export default function AboutPage() {
 	return (
 		<>
 				<h1 className={title()}>Sobre mim</h1>
-			   
-				<ScrollShadow hideScrollBar className="w-[300px] h-[400px] ">
+			   <div className="w-lg gap-300 bg-red">
+			   <ScrollShadow hideScrollBar className="w-[300px] h-[400px] gap-300 ">
 				<Content />
 				</ScrollShadow>
+			   </div>
+				
 		</>
 	
 	);
