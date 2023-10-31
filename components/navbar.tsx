@@ -7,10 +7,9 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
+
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
+
 
 import { link as linkStyles } from "@nextui-org/theme";
 
@@ -20,7 +19,6 @@ import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-	TwitterIcon,
 	GithubIcon,
 	LinkedinIcon,
 } from "@/components/icons";
@@ -90,13 +88,9 @@ export const Navbar = () => {
 						<NavbarMenuItem key={`${item}-${index}`}>
 							<Link
 								color={
-									index === 2
-										? "primary"
-										: index === siteConfig.navMenuItems.length - 1
-										? "danger"
-										: "foreground"
+									"foreground"
 								}
-								href="#"
+								href={siteConfig.navMenuItems[index].href}
 								size="lg"
 							>
 								{item.label}

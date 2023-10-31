@@ -193,7 +193,7 @@ export default function Homepage() {
 
 			</div>
 
-			<h1 className="text-l font-semibold text-slate-300">Tecnologies utilized in backend:</h1>
+			<h1 className="text-l font-semibold ">Tecnologies utilized in backend:</h1>
 			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
 				<Popover key="5" placement="top" color={colors[0]}>
 					<PopoverTrigger>
@@ -311,7 +311,7 @@ export default function Homepage() {
 
 			</div>
 
-			<h1 className="text-l font-semibold text-slate-300">Tecnologies utilized in backend:</h1>
+			<h1 className="text-l font-semibold ">Tecnologies utilized in backend:</h1>
 			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
 				<Popover key="5" placement="top" color={colors[0]}>
 					<PopoverTrigger>
