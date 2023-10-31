@@ -138,7 +138,7 @@ export default function Homepage() {
 
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
-					My name is Vinícius, and I&apos;m a fullstack developer
+					My name is Vinícius, and I&apos;m a fullstack developer 🤓
 				</h1>
 			</div>
 
@@ -153,6 +153,23 @@ export default function Homepage() {
 
 					src="/full-stack-development.gif"
 				/>
+
+                <Accordion >
+				<AccordionItem
+				
+					aria-label="Fullstack"
+					subtitle={
+					<span>
+						CLICK HERE
+					</span>
+					}
+					
+				>
+					Full-stack projects require time, discipline, and a lot of dedication. In this context, I am sharing the projects to which I devoted the most time and that pleased me the most. I invested time and study in each of them, always aiming to implement them in the best way possible, considering my level as a developer. I chose to tackle projects that explore different technologies and details, taking into account the programming language and the tool used, including variations in the database, for example. If you are interested in exploring other projects I have developed, feel free to visit my repositories on GitHub. 😁
+                
+     		   </AccordionItem>
+
+			</Accordion>    
 			<div>
 				<h1 className="text-l font-semibold">
 					Take a look at web applications below, to check my professional experience. 💼
