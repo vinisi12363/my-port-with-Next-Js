@@ -110,7 +110,7 @@ export default function Homepage() {
 			</div>
             <Image
 					width={1200}
-					rounded-full
+					
 					alt="dev-fullstack"
 					
 
@@ -139,7 +139,7 @@ export default function Homepage() {
 			</Accordion>
 			<Image
 				width={1300}
-				rounded-full
+				
 				isZoomed
 				alt="Afflatus"
 				src="/afflatus.png"
