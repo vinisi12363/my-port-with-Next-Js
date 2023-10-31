@@ -75,7 +75,43 @@ export default function Homepage() {
 			<div className="text-small font-bold">Express</div>
 			<div className="text-tiny">Express be used for management of Routes and async requests</div>
 		</div>
-	</PopoverContent>,
+	    </PopoverContent>,
+        	<PopoverContent key="19">
+            <div className="px-1 py-2">
+                <div className="text-small font-bold">PostgreSQL</div>
+                <div className="text-tiny">Relational Database </div>
+            </div>
+            </PopoverContent>,
+            	<PopoverContent key="20">
+                <div className="px-1 py-2">
+                    <div className="text-small font-bold">Java ☕</div>
+                    <div className="text-tiny">Father of poo Languages (in my opinion ) </div>
+                </div>
+                </PopoverContent>,
+                	<PopoverContent key="21">
+                    <div className="px-1 py-2">
+                        <div className="text-small font-bold">My SQL</div>
+                        <div className="text-tiny">Relational Database</div>
+                    </div>
+                    </PopoverContent>,
+                    <PopoverContent key="22">
+                    <div className="px-1 py-2">
+                        <div className="text-small font-bold">Vite</div>
+                        <div className="text-tiny">Vite is a powerful react Framework</div>
+                    </div>
+                    </PopoverContent>,
+                      <PopoverContent key="23">
+                      <div className="px-1 py-2">
+                          <div className="text-small font-bold">Styled-Components</div>
+                          <div className="text-tiny"> Is a wonderful tool utilized on page styles</div>
+                      </div>
+                      </PopoverContent>,
+                       <PopoverContent key="24">
+                       <div className="px-1 py-2">
+                           <div className="text-small font-bold">Postman</div>
+                           <div className="text-tiny"> Is software utilized to requests in API</div>
+                       </div>
+                       </PopoverContent>,
 	]
 	const AccordionContent = [
 		"O Afflatus Assistant é um sistema criado para lidar com o cadastro de clientes e eventos para uma empresa de fotografia infantil. Com ele, é possível cadastrar um cliente (pai/mãe) e seus filhos, além de salvar datas importantes para o cliente, como o batizado do bebê e os primeiros passos, entre outros eventos relevantes. Isso ajuda a empresa de fotografia a impulsionar as vendas e a obter um cadastro completo e seguro de seus clientes.",
@@ -167,7 +203,7 @@ export default function Homepage() {
 							<Image alt="photo"  src="https://skillicons.dev/icons?i=vite"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[13]}
 				</Popover>
 				<Popover key="3" placement="top" color={colors[0]}>
 					<PopoverTrigger>
@@ -185,7 +221,7 @@ export default function Homepage() {
 							<Image alt="photo"  src="https://skillicons.dev/icons?i=styledcomponents"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[14]}
 				</Popover>
 
 
@@ -203,7 +239,7 @@ export default function Homepage() {
 							<Image  alt="photo"  src="https://skillicons.dev/icons?i=nodejs"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[5]}
 				</Popover>
 
 				<Popover key="6" placement="top" color={colors[0]}>
@@ -234,9 +270,17 @@ export default function Homepage() {
 							<Image alt="photo"  src="https://skillicons.dev/icons?i=postman"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[15]}
 				</Popover>
-				
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Postgres
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=postgres"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[10]}
+				</Popover>
 				
 
 			</div>
@@ -303,7 +347,7 @@ export default function Homepage() {
 							<Image alt="photo"  src="https://skillicons.dev/icons?i=styledcomponents"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[14]}
 				</Popover>
 
 
@@ -321,7 +365,7 @@ export default function Homepage() {
 							<Image  alt="photo"  src="https://skillicons.dev/icons?i=nodejs"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[5]}
 				</Popover>
 
 				<Popover key="6" placement="top" color={colors[0]}>
@@ -352,7 +396,7 @@ export default function Homepage() {
 							<Image alt="photo"  src="https://skillicons.dev/icons?i=postman"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[15]}
 				</Popover>
 				
 				
@@ -403,7 +447,7 @@ export default function Homepage() {
 							<Image  alt="photo"  src="https://skillicons.dev/icons?i=java"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[0]}
+					{content[11]}
 				</Popover>
                 <Popover key="6" placement="top" color={colors[0]}>
 					<PopoverTrigger>
@@ -412,7 +456,7 @@ export default function Homepage() {
 							<Image alt="photo"  src="https://skillicons.dev/icons?i=mysql"></Image>
 						</Button>
 					</PopoverTrigger>
-					{content[4]}
+					{content[12]}
 				</Popover>
 
 			
