@@ -80,6 +80,7 @@ export default function Homepage() {
 	const AccordionContent = [
 		"O Afflatus Assistant é um sistema criado para lidar com o cadastro de clientes e eventos para uma empresa de fotografia infantil. Com ele, é possível cadastrar um cliente (pai/mãe) e seus filhos, além de salvar datas importantes para o cliente, como o batizado do bebê e os primeiros passos, entre outros eventos relevantes. Isso ajuda a empresa de fotografia a impulsionar as vendas e a obter um cadastro completo e seguro de seus clientes.",
 		"O My Wallet é um Web App com o objetivo de ajudar o usuário a controlar suas finanças. Com ele, é possível cadastrar entradas e saídas de dinheiro, além de poder ver o saldo atualizado. O My Wallet é um sistema simples, mas que pode ajudar muito o usuário a ter um controle maior sobre suas finanças.",
+        "ACMSOFT é um software que trás suporte a toda parte de gestão acadêmica da universidade. Tem a funcionalidade de cadastrar salas, horário das aulas, datas, professores, alunos, disciplinas, cursos, colegiados, departamentos, coordenadores de colegiado; consultar dados; editar; excluir; matricular ou remover a matricula de alunos nas disciplinas; lançar notas do aluno; criar frequência e lançar ata de reunião. O objetivo do desenvolvimento deste projeto está voltado para a agilidade, competência, acessibilidade, redução de papelada, diminuição de erros e a organização dos dados na gestão acadêmica na universidade do cliente."
 	]
 	const colors :any= [
 		"default",
@@ -358,6 +359,69 @@ export default function Homepage() {
 
 			</div>
 
+            <br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<h1 className="text-l font-semibold ">ACM SOFTWARE (Java Desktop)</h1>
+			<Accordion >
+				<AccordionItem
+				
+					aria-label="ACM Software"
+					subtitle={
+					<span>
+						Click to Expand
+					</span>
+					}
+					title="System Description"
+				>
+					{AccordionContent[2]}
+     		   </AccordionItem>
+
+			</Accordion>
+			<Image
+				
+				rounded-full
+				isZoomed
+				alt="Acm Cadastro de alunos"
+				src="/acm_1.png"
+			/>
+
+            <br></br>
+            
+			<div className="inline-block max-w-lg text-center font-sans justify-center">
+ 				<h1 className="text-l font-semibold ">Tecnologies used :</h1>
+			</div>
+			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
+
+                 <Popover key="5" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Java
+							<Image  alt="photo"  src="https://skillicons.dev/icons?i=java"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[0]}
+				</Popover>
+                <Popover key="6" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							MySQL
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=mysql"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[4]}
+				</Popover>
+
+			
+			</div>
+
+		
+				
+
+			
 
 
 		</section>
