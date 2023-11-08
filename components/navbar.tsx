@@ -24,7 +24,7 @@ import {
 } from "@/components/icons";
 
 import { Logo } from "@/components/icons";
-
+import { LanguageSelector } from "./LanguageComponent";
 export const Navbar = () => {
 
 	return (
@@ -67,6 +67,7 @@ export const Navbar = () => {
 						<GithubIcon className="text-default-500" />
 					</Link>
 					<ThemeSwitch />
+					
 				</NavbarItem>
 				
 			
