@@ -40,7 +40,7 @@ export default function Homepage() {
 
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">Typescript</div>
-				<div className="text-tiny">Any type is now allowed here xD</div>
+				<div className="text-tiny">Any type is not allowed here xD</div>
 			</div>
 		</PopoverContent>,
 
