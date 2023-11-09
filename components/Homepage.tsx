@@ -138,7 +138,7 @@ export default function Homepage() {
 
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
-					My name is Vinícius, and I&apos;m a fullstack developer 🤓
+					Meu nome é Vinícius, eu sou um Desenvolvedor fullstack 🤓
 				</h1>
 			</div>
 
@@ -160,19 +160,18 @@ export default function Homepage() {
 					aria-label="Fullstack"
 					subtitle={
 					<span>
-						CLICK HERE
+						CLICK AQUI!
 					</span>
 					}
 					
 				>
-					Full-stack projects require time, discipline, and a lot of dedication. In this context, I am sharing the projects to which I devoted the most time and that pleased me the most. I invested time and study in each of them, always aiming to implement them in the best way possible, considering my level as a developer. I chose to tackle projects that explore different technologies and details, taking into account the programming language and the tool used, including variations in the database, for example. If you are interested in exploring other projects I have developed, feel free to visit my repositories on GitHub. 😁
-                
+					Projetos full-stack requerem tempo, disciplina e muita dedicação. Nesse contexto, estou compartilhando os projetos aos quais dediquei mais tempo e que mais me agradaram. Investi tempo e estudo em cada um deles, sempre com o objetivo de implementá-los da melhor maneira possível, considerando o meu nível como desenvolvedor. Escolhi abordar projetos que exploram diferentes tecnologias e detalhes, levando em conta a linguagem de programação e a ferramenta utilizada, incluindo variações no banco de dados, por exemplo. Se você estiver interessado em explorar outros projetos que desenvolvi, sinta-se à vontade para visitar meus repositórios no GitHub. 😁
      		   </AccordionItem>
 
 			</Accordion>    
 			<div>
 				<h1 className="text-l font-semibold">
-					Take a look at web applications below, to check my professional experience. 💼
+					Dê uma olhada em algumas aplicações web abaixo, se quiser verificar a minha experiência profissional. 💼
 				</h1>
 			</div>
 			<h1 className="text-l font-semibold ">Afflatus Assistant</h1>
@@ -182,7 +181,7 @@ export default function Homepage() {
 					aria-label="Afflatus"
 					subtitle={
 					<span>
-						Click to Expand
+						Click para expandir
 					</span>
 					}
 					title="System Description"
@@ -200,7 +199,7 @@ export default function Homepage() {
 			/>
 
 			<div className="inline-block max-w-lg text-center font-sans justify-center">
- 				<h1 className="text-l font-semibold ">Tecnologies used in frontend:</h1>
+ 				<h1 className="text-l font-semibold ">Tecnologias utilizadas no frontend:</h1>
 			</div>
 			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
 
@@ -247,7 +246,7 @@ export default function Homepage() {
 
 			</div>
 
-			<h1 className="text-l font-semibold ">Tecnologies utilized in backend:</h1>
+			<h1 className="text-l font-semibold ">Tecnologias utilizadas no backend:</h1>
 			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
 				<Popover key="5" placement="top" color={colors[0]}>
 					<PopoverTrigger>
@@ -309,14 +308,14 @@ export default function Homepage() {
 			<br></br>
 			<br></br>
 			<br></br>
-			<h1 className="text-l font-semibold ">My Wallet (Mobile Aproach)</h1>
+			<h1 className="text-l font-semibold ">My Wallet (Voltado para mobile)</h1>
 			<Accordion >
 				<AccordionItem
 				
 					aria-label="MyWallet"
 					subtitle={
 					<span>
-						Click to Expand
+						Click para abrir
 					</span>
 					}
 					title="System Description"
@@ -334,7 +333,7 @@ export default function Homepage() {
 			/>
 
 			<div className="inline-block max-w-lg text-center font-sans justify-center">
- 				<h1 className="text-l font-semibold ">Tecnologies used in frontend:</h1>
+ 				<h1 className="text-l font-semibold ">Tecnologias utilizadas no frontend:</h1>
 			</div>
 			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
 
@@ -373,7 +372,7 @@ export default function Homepage() {
 
 			</div>
 
-			<h1 className="text-l font-semibold ">Tecnologies utilized in backend:</h1>
+			<h1 className="text-l font-semibold ">Tecnologias utilizadas no backend:</h1>
 			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
 				<Popover key="5" placement="top" color={colors[0]}>
 					<PopoverTrigger>
@@ -433,7 +432,7 @@ export default function Homepage() {
 					aria-label="ACM Software"
 					subtitle={
 					<span>
-						Click to Expand
+						Click para expandir
 					</span>
 					}
 					title="System Description"
@@ -453,7 +452,7 @@ export default function Homepage() {
             <br></br>
             
 			<div className="inline-block max-w-lg text-center font-sans justify-center">
- 				<h1 className="text-l font-semibold ">Tecnologies used :</h1>
+ 				<h1 className="text-l font-semibold ">Tecnologias utilizadas :</h1>
 			</div>
 			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
 
