@@ -138,7 +138,7 @@ export default function Homepage() {
 
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
-					Meu nome é Vinícius, eu sou um Desenvolvedor fullstack 🤓
+				  Meu nome é Vinícius,sou um Dev fullstack 🤓
 				</h1>
 			</div>
 
