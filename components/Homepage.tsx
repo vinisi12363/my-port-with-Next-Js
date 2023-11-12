@@ -4,6 +4,7 @@ import { Image } from "@nextui-org/image";
 import { Button } from "@nextui-org/button";
 import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
+import { Curriculum } from "./Curriculum";
 
 
 export default function Homepage() {
@@ -477,7 +478,6 @@ export default function Homepage() {
 
 			
 			</div>
-
 		
 				
 
