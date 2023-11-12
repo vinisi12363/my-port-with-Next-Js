@@ -10,5 +10,5 @@ export const DownloadButton = ({ onClick }: { onClick?: () => void }) => {
     );
   };
 
-  return <Button onClick={onClick ? () => onClick() : download}>Baixar meu CV</Button>;
+  return <Button onClick={onClick ? () => onClick() : download}>Baixar meu CV 📄</Button>;
 };

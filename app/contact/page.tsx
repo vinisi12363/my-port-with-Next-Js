@@ -1,7 +1,7 @@
 "use client"
 import { title, subtitle } from "@/components/primitives";
 import { DownloadButton } from "@/components/Button";
-import { Button } from "@nextui-org/button";
+
 
 export default function BlogPage() {
 	const download = () => {
@@ -21,9 +21,7 @@ export default function BlogPage() {
 			</a>
 			<br></br>
 			<br></br>
-			<DownloadButton>
-				
-			</DownloadButton>
+			<DownloadButton></DownloadButton>
 			
 
 		</div>

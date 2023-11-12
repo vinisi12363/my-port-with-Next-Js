@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/button";
 import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/react";
 import {Accordion, AccordionItem} from "@nextui-org/react";
 import { Curriculum } from "./Curriculum";
+import { DownloadButton } from "@/components/Button";
 
 
 export default function Homepage() {
@@ -479,8 +480,14 @@ export default function Homepage() {
 			
 			</div>
 		
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
+				<h1 className="text-l font-semibold ">Curriculum Vitae :</h1>
+					
 				
-
+				<DownloadButton></DownloadButton>
 			
 
 
