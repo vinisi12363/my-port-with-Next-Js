@@ -1,6 +1,6 @@
 "use client"
 import { title, subtitle } from "@/components/primitives";
-import { DownloadButton } from "@/components/Button";
+import { DownloadCvButton } from "@/components/CvButton";
 
 
 export default function BlogPage() {
@@ -21,7 +21,7 @@ export default function BlogPage() {
 			</a>
 			<br></br>
 			<br></br>
-			<DownloadButton></DownloadButton>
+			<DownloadCvButton></DownloadCvButton>
 			
 
 		</div>

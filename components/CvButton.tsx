@@ -2,7 +2,7 @@
 import { Button } from "@nextui-org/react";
 import React from "react";
 
-export const DownloadButton = ({ onClick }: { onClick?: () => void }) => {
+export const DownloadCvButton = ({ onClick }: { onClick?: () => void }) => {
   const download = () => {
     window.open(
       "./CV_Marcos_Vinicius.pdf",
