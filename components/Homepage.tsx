@@ -121,6 +121,7 @@ export default function Homepage() {
 		"O My Wallet é um Web App com o objetivo de ajudar o usuário a controlar suas finanças. Com ele, é possível cadastrar entradas e saídas de dinheiro, além de poder ver o saldo atualizado. O My Wallet é um sistema simples, mas que pode ajudar muito o usuário a ter um controle maior sobre suas finanças.",
         "ACMSOFT é um software que trás suporte a toda parte de gestão acadêmica da universidade. Tem a funcionalidade de cadastrar salas, horário das aulas, datas, professores, alunos, disciplinas, cursos, colegiados, departamentos, coordenadores de colegiado; consultar dados; editar; excluir; matricular ou remover a matricula de alunos nas disciplinas; lançar notas do aluno; criar frequência e lançar ata de reunião. O objetivo do desenvolvimento deste projeto está voltado para a agilidade, competência, acessibilidade, redução de papelada, diminuição de erros e a organização dos dados na gestão acadêmica na universidade do cliente.",
 		"GrupoCine é um webapp para reserva de assentos da empresa Grupo Cine desenvolvido em Javascript com React, através dele, o usuário visualiza os filmes disponívels no cinema e também os assentos para realizar a sua reserva caso queira. OBS.: A API para consumo e manipulação dos dados de uso particular,  com todos os direitos reservados.",
+		"Weather é um webapp voltado para mostrar informações climáticas de qualquer local do mundo!"
 	]
 	const colors :any= [
 		"default",
@@ -558,6 +559,78 @@ export default function Homepage() {
             <br></br>	
             <br></br>	
             <br></br>
+			<br></br>
+			<br></br>
+			<h1 className="text-l font-semibold ">Weather</h1>
+			<Accordion >
+				<AccordionItem
+				
+					aria-label="Weather"
+					subtitle={
+					<span>
+						Click para abrir
+					</span>
+					}
+					title="Descrição do Sistema"
+				>
+					{AccordionContent[4]}
+     		   </AccordionItem>
+
+			</Accordion>
+			<Image
+				
+				rounded-full
+			
+				alt="WeatherApp"
+				src="/weather.png"
+			/>
+
+			<div className="inline-block max-w-lg text-center font-sans justify-center">
+ 				<h1 className="text-l font-semibold ">Tecnologias utilizadas no frontend:</h1>
+			</div>
+			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
+
+				<Popover key="1" placement="top" color={colors[7]}>
+					<PopoverTrigger>
+						<Button color={colors[7]} className="capitalize">
+							react
+							<Image alt="photo" src="https://skillicons.dev/icons?i=react"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[2]}
+				</Popover>
+			
+				<Popover key="3" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							javascript
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=js"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[3]}
+				</Popover>
+				<Popover key="4" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Styled Components
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=styledcomponents"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[14]}
+				</Popover>
+
+
+					
+
+
+			</div>
+			<h1 className="text-l font-semibold ">Acesse aqui:</h1>
+			<DeployButton link={"https://projeto25-desafio-tecnico-dcic.vercel.app/"}></DeployButton>
+					
+				
+            <br></br>	
+            <br></br>	
+            <br></br>	
 
 
 

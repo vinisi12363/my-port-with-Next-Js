@@ -10,7 +10,7 @@ export const Content = () => (
       <br></br>
         <p className={subtitle()}>
         Estou no ramo do desenvolvimento web faz 1 ano e meio, estou sempre
-        buscando aprender mais e mais e aprimorar as ferramentas que já utilizo
+        buscando aprender mais e me aprimorar nas ferramentas que já utilizo
         diariamente.
       
         Sou naturalmente proativo, extrovertido e bastante comunicativo. 
@@ -18,10 +18,9 @@ export const Content = () => (
         Possuo experiência com trabalho em equipes de desenvolvimento que
         utilizaram de tecnologias de denvolvimento ágil como Scrum e Kanban.
       
-      
         Como principal diferencial, posso dizer que sou muito bom em me adaptar
         ao que é novo, essa capacidade de análise e adaptação ao cenário atual,
-        tem me permitido avançar bastante em minhas jornada como profissional da
+        tem me permitido avançar bastante em minha jornada como profissional da
         área de desenvolvimento.
         </p>
       
