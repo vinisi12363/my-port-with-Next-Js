@@ -140,7 +140,15 @@ export default function Homepage() {
 			<h1 className={title({ color: "violet", class: "bg-cliptext text-lg font-semibold text-slate-500 text-transparent bg-gradient-to-b " })}>
 				Hello World!
 			</h1>
+			<Image
+					width={600}
 
+					height={600}
+					
+					alt="dev-fullstack"
+					
+					src="/full-stack-development.gif"
+				/>
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
 				  Meu nome é Vinícius, sou um Dev fullstack 🤓
@@ -150,33 +158,16 @@ export default function Homepage() {
 			<div className="flex flex-wrap align-center max-w-lg justify-center inline-block ml-3 gap-6">
 			
 			</div>
-            <Image
-					width={1200}
-					
-					alt="dev-fullstack"
-					
-
-					src="/full-stack-development.gif"
-				/>
-
-                <Accordion >
-				<AccordionItem
-				
-					aria-label="Fullstack"
-					subtitle={
-					<span>
-						CLICK AQUI!
-					</span>
-					}
-					
-				>
-					Projetos full-stack requerem tempo, disciplina e muita dedicação. Nesse contexto, estou compartilhando os projetos aos quais dediquei mais tempo e que mais me agradaram. Investi tempo e estudo em cada um deles, sempre com o objetivo de implementá-los da melhor maneira possível, considerando o meu nível como desenvolvedor. Escolhi abordar projetos que exploram diferentes tecnologias e detalhes, levando em conta a linguagem de programação e a ferramenta utilizada, incluindo variações no banco de dados, por exemplo. Se você estiver interessado em explorar outros projetos que desenvolvi, sinta-se à vontade para visitar meus repositórios no GitHub. 😁
-     		   </AccordionItem>
-
-			</Accordion>    
+			<div className="flex flex-wrap padding-top justify-center">
+			
+			<p className="text-justify text-xl">
+				Sou um entusiasta na programação, atualmente estou cursando o 7º semestre de Sistemas de Informação na Universidade Estadual do Sudoeste da Bahia (UESB). Estou sempre buscando aprender mais e me aprimorar nas ferramentas que já utilizo diariamente. Sou naturalmente proativo, extrovertido e bastante comunicativo. Possuo experiência com trabalho em equipes de desenvolvimento que utilizaram de tecnologias de denvolvimento ágil como Scrum e Kanban. Como principal diferencial, posso dizer que sou muito bom em me adaptar ao que é novo, essa capacidade de análise e adaptação ao cenário atual, tem me permitido avançar bastante em minha jornada como profissional da área de desenvolvimento. 
+			 </p>	
+			</div>
+              
 			<div>
 				<h1 className="text-l font-semibold">
-					Dê uma olhada em algumas aplicações web abaixo, se quiser verificar a minha experiência profissional. 💼
+					Dê uma olhada em algumas aplicações web abaixo, se quiser visualizar alguns projetos que desenvolvi. 💼
 				</h1>
 			</div>
 			<h1 className="text-l font-semibold ">Afflatus Assistant</h1>
