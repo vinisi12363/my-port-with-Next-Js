@@ -138,7 +138,7 @@ export default function Homepage() {
 
 
 			<h1 className={title({ color: "violet", class: "bg-cliptext text-lg font-semibold text-slate-500 text-transparent bg-gradient-to-b " })}>
-				Hello World!
+				Hello World!!! 	Seja muito bem vindo(a)! 
 			</h1>
 			<Image
 					width={600}
@@ -151,7 +151,7 @@ export default function Homepage() {
 				/>
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
-				  Meu nome é Vinícius, sou um Dev fullstack 🤓
+				  Meu nome é Vinícius, sou Desenvolvedor Fullstack 🤓
 				</h1>
 			</div>
 
@@ -159,9 +159,15 @@ export default function Homepage() {
 			
 			</div>
 			<div className="flex flex-wrap padding-top justify-center">
+		
+			<p className="text-justify text-xl pt-50">
 			
-			<p className="text-justify text-xl">
-				Sou um entusiasta na programação, atualmente estou cursando o 7º semestre de Sistemas de Informação na Universidade Estadual do Sudoeste da Bahia (UESB). Estou sempre buscando aprender mais e me aprimorar nas ferramentas que já utilizo diariamente. Sou naturalmente proativo, extrovertido e bastante comunicativo. Possuo experiência com trabalho em equipes de desenvolvimento que utilizaram de tecnologias de denvolvimento ágil como Scrum e Kanban. Como principal diferencial, posso dizer que sou muito bom em me adaptar ao que é novo, essa capacidade de análise e adaptação ao cenário atual, tem me permitido avançar bastante em minha jornada como profissional da área de desenvolvimento. 
+				
+				Sou Desenvolvedor de software, meu foco principal não é a linguagem e nem a ferramenta, mas busco sempre atender as necessidades das pessoas / empresas da melhor forma possível  e como consequência,  tento sempre me manter atualizado para resolver problemas. Amo oque faço!  Não me importo em aprender algo novo se aquilo for me ajudar a atender a demanda que eu preciso,  ou se for para solucionar um determinado problema do momento. sou uma pessoa extrovertida,  sou comunicativo e gosto de trabalhar em equipe afim de alcançar o objetivo comum.
+
+				Esse sou eu, ficarei feliz em me juntar a sua empresa e agregar valor da melhor forma sempre!
+
+
 			 </p>	
 			</div>
               
