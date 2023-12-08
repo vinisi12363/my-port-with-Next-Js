@@ -138,7 +138,7 @@ export default function Homepage() {
 
 
 			<h1 className={title({ color: "violet", class: "bg-cliptext text-lg font-semibold text-slate-500 text-transparent bg-gradient-to-b " })}>
-				Hello World!!! 	Seja muito bem vindo(a)! 
+				Hello World!!! 	Seja muito bem vindo(a)!!! 
 			</h1>
 			<Image
 					width={600}
