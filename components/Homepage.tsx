@@ -170,7 +170,10 @@ export default function Homepage() {
 
 			 </p>	
 			</div>
-              
+            <div className="flex flex-col justify-center">
+			<h1 className="text-l font-semibold ">Meu Curriculum Vitae :</h1>
+			<DownloadCvButton></DownloadCvButton>
+			</div>
 			<div>
 				<h1 className="text-l font-semibold">
 					Dê uma olhada em algumas aplicações web abaixo, se quiser visualizar alguns projetos que desenvolvi. 💼
