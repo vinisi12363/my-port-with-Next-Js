@@ -181,7 +181,7 @@ export default function Homepage() {
 			</div>
 			<div>
 				<h1 className="text-l font-semibold">
-				💼 Por favor, fiquei a vontada para dar uma olhada nos projetos mais importantes que desenvolvi e estou desenvolvendo:
+				💼 Por favor, fique a vontade para dar uma olhada nos projetos mais importantes que desenvolvi e estou desenvolvendo:
 				</h1>
 			</div>
 			<h1 className="text-l font-semibold "><a href="https://www.instagram.com/unoclinicajequie/" target="blank">PROUNO - Unoclínica</a></h1>
