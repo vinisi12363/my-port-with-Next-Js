@@ -171,8 +171,8 @@ export default function Homepage() {
 				Comecei na área da programação em 2013 através do Bacharelado em Sistemas de Informação pela Universidade Estadual do Sudoeste da Bahia. 
 				Depois de uma pausa na carreira e de ter passado por outros setores, retornei à área de T.I. há cerca de 2 anos. 
 				Desde então tenho desenvolvido projetos web, com o auxílio de cursos preparatórios e experiência de campo como desenvolvedor.
-				Atualmente, estou desenolvendo em conjunto com uma equipe como desenvolvedor backend para a Uno Clínica (uma clínica médica da minha cidade).
-				Resumidamente, estou atuando na migração do backend com arquitetura em monólito para micro-serviços em Java, e também na migração do banco de dados relacional (MySQL) para um banco não-relacional (MongoDB), utilizando arquitetura hexagonal Kanban e Github para organizar e versionar tudo que é desenvolvido.
+				Atualmente, estou atuando em conjunto com uma equipe como dev backend para a Uno Clínica (uma clínica médica da minha cidade) de maneira voluntária.
+				Resumidamente, estou atuando na migração do backend com arquitetura em monólito para micro-serviços em Java, e também na migração do banco de dados relacional (MySQL) para um banco não-relacional (MongoDB), utilizando arquitetura hexagonal, Kanban, Scrum e Github para organizar e versionar tudo que é desenvolvido.
 			 </h1>	
 			</div>
             <div className="flex flex-col justify-center">
