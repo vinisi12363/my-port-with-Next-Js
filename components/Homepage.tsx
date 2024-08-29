@@ -21,7 +21,7 @@ export default function Homepage() {
 		<PopoverContent key="10">
 			<div className="px-1 py-2">
 				<div className="text-small font-bold">CSS</div>
-				<div className="text-tiny">I like your style</div>
+				<div className="text-tiny">Style for HTML pages</div>
 			</div>
 		</PopoverContent>,
 
@@ -115,13 +115,20 @@ export default function Homepage() {
                            <div className="text-tiny"> Is software utilized to requests in API</div>
                        </div>
                        </PopoverContent>,
+						<PopoverContent key="25">
+						<div className="px-1 py-2">
+							<div className="text-small font-bold">Redux</div>
+							<div className="text-tiny"> State centralization, predictability, complex state management, component synchronization.</div>
+						</div>
+						</PopoverContent>
 	]
 	const AccordionContent = [
 		"O Afflatus Assistant é um sistema criado para lidar com o cadastro de clientes e eventos para uma empresa de fotografia infantil. Com ele, é possível cadastrar um cliente (pai/mãe) e seus filhos, além de salvar datas importantes para o cliente, como o batizado do bebê e os primeiros passos, entre outros eventos relevantes. Isso ajuda a empresa de fotografia a impulsionar as vendas e a obter um cadastro completo e seguro de seus clientes.",
 		"O My Wallet é um Web App com o objetivo de ajudar o usuário a controlar suas finanças. Com ele, é possível cadastrar entradas e saídas de dinheiro, além de poder ver o saldo atualizado. O My Wallet é um sistema simples, mas que pode ajudar muito o usuário a ter um controle maior sobre suas finanças.",
         "ACMSOFT é um software que trás suporte a toda parte de gestão acadêmica da universidade. Tem a funcionalidade de cadastrar salas, horário das aulas, datas, professores, alunos, disciplinas, cursos, colegiados, departamentos, coordenadores de colegiado; consultar dados; editar; excluir; matricular ou remover a matricula de alunos nas disciplinas; lançar notas do aluno; criar frequência e lançar ata de reunião. O objetivo do desenvolvimento deste projeto está voltado para a agilidade, competência, acessibilidade, redução de papelada, diminuição de erros e a organização dos dados na gestão acadêmica na universidade do cliente.",
 		"GrupoCine é um webapp para reserva de assentos da empresa Grupo Cine desenvolvido em Javascript com React, através dele, o usuário visualiza os filmes disponívels no cinema e também os assentos para realizar a sua reserva caso queira. OBS.: A API para consumo e manipulação dos dados de uso particular,  com todos os direitos reservados.",
-		"Weather é um webapp voltado para mostrar informações climáticas de qualquer local do mundo!"
+		"Weather é um webapp voltado para mostrar informações climáticas de qualquer local do mundo!",
+		"O Prouno é um webapp gerenciador de atendimentos médicos. Baseado no funcionamento da clínica e focado desde o agendamento do paciente até o pós-atendimento , o sistema gerencia a agenda dos médicos, novos atendimentos e também o histórico cada paciente atendido (anamnese). Os dados sensíveis ficam visíveis somente ao médico responsável e seu paciente de forma totalmente segura e sigilosa. O sistema é desenvolvido em React no frontend e Java no backend, com banco de dados MySQL.",
 	]
 	const colors :any= [
 		"default",
@@ -138,7 +145,7 @@ export default function Homepage() {
 
 
 			<h1 className={title({ color: "violet", class: "bg-cliptext text-lg font-semibold text-slate-500 text-transparent bg-gradient-to-b " })}>
-				Hello World!!! 	Seja muito bem vindo(a)!!! 
+				Olá, Bem vindo(a) ao meu portfólio! 
 			</h1>
 			<Image
 					width={600}
@@ -151,7 +158,7 @@ export default function Homepage() {
 				/>
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
-				  Meu nome é Vinícius, sou Desenvolvedor Fullstack 🤓
+				 Meu nome é Marcos Vinícius sou Desenvolvedor
 				</h1>
 			</div>
 
@@ -160,15 +167,13 @@ export default function Homepage() {
 			</div>
 			<div className="flex flex-wrap padding-top justify-center">
 		
-			<p className="text-justify text-xl pt-50">
-			
-				
-				Sou Desenvolvedor de software, meu foco principal não é a linguagem e nem a ferramenta, mas busco sempre atender as necessidades das pessoas / empresas da melhor forma possível  e como consequência,  tento sempre me manter atualizado para resolver problemas. Amo oque faço!  Não me importo em aprender algo novo se aquilo for me ajudar a atender a demanda que eu preciso,  ou se for para solucionar um determinado problema do momento. sou uma pessoa extrovertida,  sou comunicativo e gosto de trabalhar em equipe afim de alcançar o objetivo comum.
-
-				Esse sou eu, ficarei feliz em me juntar a sua empresa e agregar valor da melhor forma sempre!
-
-
-			 </p>	
+			<h1 className="text-justify text-l pt-50">		
+				Comecei na área da programação em 2013 através do Bacharelado em Sistemas de Informação pela Universidade Estadual do Sudoeste da Bahia. 
+				Depois de uma pausa na carreira e de ter passado por outros setores, retornei à área de T.I. há cerca de 2 anos. 
+				Desde então tenho desenvolvido projetos web, com o auxílio de cursos preparatórios e experiência de campo como desenvolvedor.
+				Atualmente, estou atuando em conjunto com uma equipe como dev backend para a Uno Clínica (uma clínica médica da minha cidade) de maneira voluntária.
+				Resumidamente, estou atuando na migração do backend com arquitetura em monólito para micro-serviços em Java, e também na migração do banco de dados relacional (MySQL) para um banco não-relacional (MongoDB), utilizando arquitetura hexagonal, Kanban, Scrum e Github para organizar e versionar tudo que é desenvolvido.
+			 </h1>	
 			</div>
             <div className="flex flex-col justify-center">
 			<h1 className="text-l font-semibold ">Meu Curriculum Vitae :</h1>
@@ -176,9 +181,118 @@ export default function Homepage() {
 			</div>
 			<div>
 				<h1 className="text-l font-semibold">
-					Dê uma olhada em algumas aplicações web abaixo, se quiser visualizar alguns projetos que desenvolvi. 💼
+				💼 Por favor, fique a vontade para dar uma olhada nos projetos mais importantes que desenvolvi e estou desenvolvendo:
 				</h1>
 			</div>
+			<h1 className="text-l font-semibold "><a href="https://www.instagram.com/unoclinicajequie/" target="blank">PROUNO - Unoclínica</a></h1>
+			<Accordion >
+				<AccordionItem
+				
+					aria-label="PROUNO"
+					subtitle={
+					<span>
+						Click para expandir
+					</span>
+					}
+					title="Descrição do Sistema"
+				>
+					{AccordionContent[5]}
+     		   </AccordionItem>
+
+			</Accordion>
+			<Image
+				width={1300}
+				alt="Prouno"
+				src="/prouno_1.png"
+			/>
+
+			<div className="inline-block max-w-lg text-center font-sans justify-center">
+ 				<h1 className="text-l font-semibold ">Tecnologias utilizadas no Frontend:</h1>
+			</div>
+			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
+
+				<Popover key="1" placement="top" color={colors[7]}>
+					<PopoverTrigger>
+						<Button color={colors[7]} className="capitalize">
+							React Js
+							<Image alt="photo" src="https://skillicons.dev/icons?i=react"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[2]}
+				</Popover>
+				<Popover key="2" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Redux
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=redux"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[16]}
+				</Popover>
+				<Popover key="3" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							javascript
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=js"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[3]}
+				</Popover>
+				
+
+			</div>
+
+			<h1 className="text-l font-semibold ">Tecnologias utilizadas no Backend:</h1>
+			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
+				<Popover key="5" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Java 17
+							<Image  alt="photo"  src="https://skillicons.dev/icons?i=java"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[11]}
+				</Popover>
+				
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Springboot
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=spring"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[15]}
+				</Popover>
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							postman
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=postman"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[15]}
+				</Popover>
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							My SQL
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=mysql"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[12]}
+				</Popover>
+				
+
+			</div>
+
+
+
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
 			<h1 className="text-l font-semibold ">Afflatus Assistant</h1>
 			<Accordion >
 				<AccordionItem
