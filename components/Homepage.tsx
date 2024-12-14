@@ -129,6 +129,7 @@ export default function Homepage() {
 		"GrupoCine é um webapp para reserva de assentos da empresa Grupo Cine desenvolvido em Javascript com React, através dele, o usuário visualiza os filmes disponívels no cinema e também os assentos para realizar a sua reserva caso queira. OBS.: A API para consumo e manipulação dos dados de uso particular,  com todos os direitos reservados.",
 		"Weather é um webapp voltado para mostrar informações climáticas de qualquer local do mundo!",
 		"O Prouno é um webapp gerenciador de atendimentos médicos. Baseado no funcionamento da clínica e focado desde o agendamento do paciente até o pós-atendimento , o sistema gerencia a agenda dos médicos, novos atendimentos e também o histórico cada paciente atendido (anamnese). Os dados sensíveis ficam visíveis somente ao médico responsável e seu paciente de forma totalmente segura e sigilosa. O sistema é desenvolvido em React no frontend e Java no backend, com banco de dados MySQL.",
+		`Fazer parte do projeto Modo Caverna está sendo uma experiência absurda para mim, tanto na parte da programação quanto na visão macro do projeto. Atualmente estou responsável pela parte administrativa do desenvolvimento, atuo na parte de dados modelagem e administração do banco, Devops: arquitetura e deploy. E por fim, atuo também como dev responsável pelo suporte do sistema junto à equipe do suporte. Trabalhar no projeto Modo Caverna foi bastante desafiador no início, pois tive que aprender PHP e também arquitetura de projeto do Laravel. O projeto é desenvolvido utilizando o Laravel Framework e utiliza o Mysql como banco de dados.`,	
 	]
 	const colors :any= [
 		"default",
@@ -156,34 +157,163 @@ export default function Homepage() {
 					
 					src="/full-stack-development.gif"
 				/>
+					<br></br>	<br></br>
 			<div>
 				<h1 className={title({class: "text-l font-semibold"})}>
 				 Meu nome é Marcos Vinícius sou Desenvolvedor
 				</h1>
 			</div>
 
-			<div className="flex flex-wrap align-center max-w-lg justify-center inline-block ml-3 gap-6">
+			<div className="flex flex-wrap align-center max-w-lg justify-center ml-3 gap-6">
 			
 			</div>
 			<div className="flex flex-wrap padding-top justify-center">
 		
 			<h1 className="text-justify text-l pt-50">		
 				Comecei na área da programação em 2013 através do Bacharelado em Sistemas de Informação pela Universidade Estadual do Sudoeste da Bahia. 
-				Depois de uma pausa na carreira e de ter passado por outros setores, retornei à área de T.I. há cerca de 2 anos. 
-				Desde então tenho desenvolvido projetos web, com o auxílio de cursos preparatórios e experiência de campo como desenvolvedor.
-				Atualmente, estou atuando em conjunto com uma equipe como dev backend para a Uno Clínica (uma clínica médica da minha cidade) de maneira voluntária.
-				Resumidamente, estou atuando na migração do backend com arquitetura em monólito para micro-serviços em Java, e também na migração do banco de dados relacional (MySQL) para um banco não-relacional (MongoDB), utilizando arquitetura hexagonal, Kanban, Scrum e Github para organizar e versionar tudo que é desenvolvido.
+				Depois de uma pausa na carreira, retornei à área de programação há cerca de 3 anos. 
+				Desde então tenho desenvolvido projetos web das mais diversas áreas. Atualmente estou atuando na staff da equipe de desenvolvimento do Modo Caverna, principal produto da empresa Grupo Sideral.
+				Sou responsável pelo fluxo de desenvolvimento, administração das features e releases, deploy e dados. Sou proficiente em backend, porém atuo também no frontend quando necessário. Meu foco para 2025 é desenvolver habilidades em liderança e gestão de projetos.
 			 </h1>	
 			</div>
-            <div className="flex flex-col justify-center">
+            {/* <div className="flex flex-col justify-center">
 			<h1 className="text-l font-semibold ">Meu Curriculum Vitae :</h1>
 			<DownloadCvButton></DownloadCvButton>
-			</div>
+			</div> */}
 			<div>
 				<h1 className="text-l font-semibold">
 				💼 Por favor, fique a vontade para dar uma olhada nos projetos mais importantes que desenvolvi e estou desenvolvendo:
 				</h1>
 			</div>
+			<h1 className="text-l font-semibold "><a href="https://www.modocaverna.com/" target="blank">Modo Caverna - Grupo Sideral</a></h1>
+			<Accordion >
+				<AccordionItem
+				
+					aria-label="MODO CAVERNA"
+					subtitle={
+					<span>
+						Click para expandir
+					</span>
+					}
+					title="Descrição do Sistema"
+				>
+					{AccordionContent[6]}
+     		   </AccordionItem>
+
+			</Accordion>
+			<Image
+				rounded-full
+				width={1300}
+				alt="Modo Caverna"
+				src="/modo_caverna2.png"
+			/>
+
+			<div className="inline-block max-w-lg text-center font-sans justify-center">
+ 				<h1 className="text-l font-semibold ">Tecnologias utilizadas no Frontend:</h1>
+			</div>
+			<div className=" shadow-2x1 rounded-lg flex flex-wrap gap-7 ml-3">
+
+				<Popover key="1" placement="top" color={colors[7]}>
+					<PopoverTrigger>
+						<Button color={colors[7]} className="capitalize">
+							HTML
+							<Image alt="photo" src="https://skillicons.dev/icons?i=html"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[2]}
+				</Popover>
+				<Popover key="2" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Bootstrap
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=bootstrap"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[16]}
+				</Popover>
+				
+				<Popover key="3" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Css
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=css"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[3]}
+				</Popover>
+				
+
+				<Popover key="4" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							javascript
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=js"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[3]}
+				</Popover>
+				
+
+			</div>
+
+			<h1 className="text-l font-semibold ">Tecnologias utilizadas no Backend:</h1>
+			<div className=" flex flex-wrap shadow-2x1 rounded-lg gap-7 ml-3">
+				<Popover key="5" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							PHP
+							<Image  alt="photo"  src="https://skillicons.dev/icons?i=php"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[11]}
+				</Popover>
+				
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							Docker
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=docker"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[15]}
+				</Popover>
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							postman
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=postman"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[15]}
+				</Popover>
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+							My SQL
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=mysql"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[12]}
+				</Popover>
+				<Popover key="8" placement="top" color={colors[0]}>
+					<PopoverTrigger>
+						<Button color={colors[0]} className="capitalize">
+						Git
+							<Image alt="photo"  src="https://skillicons.dev/icons?i=git"></Image>
+						</Button>
+					</PopoverTrigger>
+					{content[12]}
+				</Popover>
+
+			</div>
+			
+			
+			
+			<br></br>
+			<br></br>
+			
+			
+			
 			<h1 className="text-l font-semibold "><a href="https://www.instagram.com/unoclinicajequie/" target="blank">PROUNO - Unoclínica</a></h1>
 			<Accordion >
 				<AccordionItem
@@ -446,7 +576,7 @@ export default function Homepage() {
 			<Image
 				
 				rounded-full
-				isZoomed
+			
 				alt="MyWallet"
 				src="/mywallet.png"
 			/>
@@ -664,14 +794,12 @@ export default function Homepage() {
 
 
 			</div>
-			<h1 className="text-l font-semibold ">Acesse aqui:</h1>
+			{/* <h1 className="text-l font-semibold ">Acesse aqui:</h1>
 			<DeployButton link={"https://grupocine-git-main-vinisi12363.vercel.app/"}></DeployButton>
-					
+					 */}
 				
             <br></br>	
-            <br></br>	
-            <br></br>	
-            <br></br>	
+      
             <br></br>
 			<br></br>
 			<br></br>
@@ -751,10 +879,10 @@ export default function Homepage() {
 
 
 
-				<h1 className="text-l font-semibold ">Curriculum Vitae :</h1>
+				{/* <h1 className="text-l font-semibold ">Curriculum Vitae :</h1>
 					
 				
-				<DownloadCvButton></DownloadCvButton>
+				<DownloadCvButton></DownloadCvButton> */}
 			
 
 
