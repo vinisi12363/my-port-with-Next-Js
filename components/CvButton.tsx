@@ -5,7 +5,7 @@ import React from "react";
 export const  DownloadCvButton = ({ onClick }: { onClick?: () => void }) => {
   const download = () => {
     window.open(
-      "./CV_Marcos_Vinicius_desenvolvedor.pdf",
+      "./CV-Marcos-Vinicius-Fullstack.pdf",
       "_blank"
     );
   };
