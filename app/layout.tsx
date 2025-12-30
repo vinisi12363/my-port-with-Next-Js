@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontMono, fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
 	title: {
@@ -33,9 +33,10 @@ export default function RootLayout({
 		<html lang="pt-br" suppressHydrationWarning>
 			<head />
 			<body
-				className={clsx(
+				className={cn(
 					"min-h-screen font-sans antialiased",
-					fontSans.variable
+					fontSans.variable,
+					fontMono.variable
 				)}
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
@@ -51,7 +52,6 @@ export default function RootLayout({
 								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
 								title="nextui.org homepage"
 							>
-
 							</Link>
 						</footer>
 					</div>

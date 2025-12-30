@@ -14,7 +14,7 @@ valor aos projetos que participo, com foco na evolução profissional.
     </div>
 
     <div>
-      <h2 className="text-2xl font-bold mb-3 text-secondary">Minha Jornada</h2>
+      <h2 className="text-2xl font-bold mb-3 text-primary">Minha Jornada</h2>
       <p className="text-base leading-relaxed text-muted-foreground">
         Comecei na área da programação em <span className="text-foreground font-semibold">2013</span> através
         do Bacharelado em Sistemas de Informação pela UESB. Depois de uma pausa na carreira, retornei à área
@@ -28,7 +28,7 @@ valor aos projetos que participo, com foco na evolução profissional.
     </div>
 
     <div>
-      <h2 className="text-2xl font-bold mb-3 text-accent">Experiência & Habilidades</h2>
+      <h2 className="text-2xl font-bold mb-3 text-primary">Experiência & Habilidades</h2>
       <p className="text-base leading-relaxed text-muted-foreground">
         Possuo experiência consolidada com <span className="text-foreground font-semibold">ReactJS</span>,{" "}
         <span className="text-foreground font-semibold">Next.js</span>,{" "}
@@ -48,7 +48,7 @@ valor aos projetos que participo, com foco na evolução profissional.
     </div>
 
     <div>
-      <h2 className="text-2xl font-bold mb-3 gradient-text">Perfil Profissional</h2>
+      <h2 className="text-2xl font-bold mb-3 text-primary ">Perfil Profissional</h2>
       <p className="text-base leading-relaxed text-muted-foreground">
         Sou naturalmente <span className="text-foreground font-semibold">proativo</span>,{" "}
         <span className="text-foreground font-semibold">extrovertido</span> e bastante{" "}

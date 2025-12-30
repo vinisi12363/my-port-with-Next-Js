@@ -27,10 +27,10 @@ export function HeroSection() {
 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
                     5+ anos de experiência criando aplicações web modernas e escaláveis com{" "}
-                    <span className="text-primary font-semibold">React</span>,{" "}
+                    <span className="text-secondary font-semibold">React</span>,{" "}
                     <span className="text-secondary font-semibold">Next.js</span>,{" "}
-                    <span className="text-accent font-semibold">Node.js</span> e{" "}
-                    <span className="text-primary font-semibold">PHP/Laravel</span>
+                    <span className="text-secondary font-semibold">Node.js</span> e{" "}
+                    <span className="text-secondary font-semibold">PHP/Laravel</span>
                 </p>
             </motion.div>
 

@@ -138,7 +138,7 @@ export function GradientBackground() {
             } else {
                 cycleLightGradient();
             }
-        }, 10000); // 10 seconds
+        }, 20000); // 10 seconds
 
         return () => clearInterval(interval);
     }, [isDark, cycleDarkGradient, cycleLightGradient]);

@@ -45,7 +45,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             scrollBehavior="inside"
             backdrop="blur"
             classNames={{
-                base: "bg-black/90 backdrop-blur-2xl border border-white/10 shadow-2xl",
+                base: "dark:bg-black/90 backdrop-blur-2xl border border-white/10 shadow-2xl",
                 header: "border-b border-white/10 pb-4",
                 body: "py-0",
                 footer: "border-t border-white/10 pt-4",
@@ -136,7 +136,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                                 <Image
                                                     alt={`${project.title} - Imagem ${currentImageIndex + 1}`}
                                                     src={images[currentImageIndex]}
-                                                    className="object-cover w-full h-full"
+                                                    className="object-contain w-full h-full"
                                                     removeWrapper
                                                 />
                                             </motion.div>
