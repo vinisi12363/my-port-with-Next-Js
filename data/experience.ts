@@ -16,9 +16,9 @@ export const experiences: Experience[] = [
         position: 'Desenvolvedor Fullstack Pleno',
         period: '06/2025',
         description: 'Desenvolvimento de completo de soluções fullstack. Fui responsável por tomadas de decisão cruciais para o desenvolvimento de diversos projetos, responsável pela estruturação de arquitetura resiliente e com suporte a tráfego de dados pesado para múiiltiplas conexões simultâneas.Atuação em projetos de alta complexidade com foco em performance e experiência do usuário.',
-        technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker', 'Digital Ocean' , 'Nest Js'],
+        technologies: ['React', 'Next.js', 'Node.js', 'TypeScript', 'PostgreSQL', 'AWS', 'Docker', 'Digital Ocean' , 'Nest Js', 'Cloudflare', 'Grafana'],
         achievements: [
-            'Desenvolvimento de aplicações web modernas e responsivas',
+            
             'Implementação de arquiteturas escaláveis e performáticas em React/Next.js e Nest.js',
             'Integração com gateways de pagamento diversos como: Asaas, Bradesco, Valepay, PagSeguro',
             'Integração com as mais diversas APIs de seguros de viagem e seguros automotivos',

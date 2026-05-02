@@ -58,7 +58,7 @@ export const projects: Project[] = [
         longDescription: 'Esse projeto, foi um verdadeiro estudo de caso sobre arquitetura e visão macro do projeto e segurança da informação. O desafio foi disponibilizar uma infraestrutura desacoplada que permitisse uma rápida escala de forma horizontal. E para tornar possível isso utilizei Load Balancer dividindo carga entre dois nós, servidores de bancos de dados remotos (Redis e MySQL) e S3 para armazenamento de arquivos e imagens.',
         technologies: ['React', 'PHP', 'Laravel', 'MySQL', 'TypeScript', 'Docker', 'Git', 'Responsive Design'],
         category: 'fullstack',
-        featured: true,
+        featured: false,
         images: {
             thumbnail: '/boraeh_1.png',
             screenshots: ['/boraeh_1.png', '/boraeh_2.png']
@@ -179,6 +179,30 @@ export const projects: Project[] = [
         links: {},
         date: '2020-2021'
     },
+    {
+        id: 8,
+        slug: 'seguro-auto',
+        title: 'Seguro Auto',
+        description: 'Plataforma de cotação de seguros automotivos integrado a seguradoras e ao Zoho CRM',
+        longDescription: 'Mais um projeto em que pude desenvolver de ponta a ponta, uma aplicação totalmente stateless em que utilizei uma arquitetura modular integrando cada seguradora e o Zoho CRM de forma desacoplada. Para a observabilidade utilizei Grafana, Prometheus, Loki e Grafana Tempo',
+        technologies: ['React.js', 'Nest', 'TypeScript', 'Docker', 'Git', 'Responsive Design', 'Tailwind CSS', 'Grafana', 'Prometheus', 'Loki', 'Grafana Tempo'],
+        category: 'fullstack',
+        featured: true,
+        images: {
+            thumbnail: '/seguro_auto.png',
+            screenshots: ['/seguro_auto_1.png', '/seguro_auto_2.png', '/seguro_auto_3.png']
+        },
+        links: {
+            live: 'https://seguroauto.newbridge.com.ar/'
+        },
+        date: '2026',
+        client: 'Grow & Scale',
+        caseStudy: {
+            challenge: 'Desenvolver um sistema seguro, resiliente, com alta escalabilidade e com uma interface moderna, rápida e responsiva para cotação de seguros automotivos.',
+            solution: 'Desenvolvi uma api modular baseada em Node focando na segurança e escalabilidade, tornei cada integração de seguradora como um conector (parte chata, mas valeu muito a pena) e diminuí o tempo de cotação montando um sistema local de cotação e sincronização de seguros. Para a observabilidade utilizei Grafana, Prometheus, Loki e Grafana Tempo.'
+        }
+    },
+
 ];
 
 export const getFeaturedProjects = () => projects.filter(p => p.featured);

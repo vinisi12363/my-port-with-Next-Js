@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { Button } from "@nextui-org/button";
 import { ArrowDown } from "lucide-react";
+import { Avatar } from "@nextui-org/react";
 
 export function HeroSection() {
     return (
@@ -17,8 +18,12 @@ export function HeroSection() {
 
             {/* Main content */}
             <motion.div variants={fadeInUp} className="text-center space-y-6 max-w-4xl px-6">
+                <Avatar
+						src="/eu_1.jpeg"
+						className="w-32 h-32 md:w-40 md:h-40 text-large mx-auto mb-6 ring-4 ring-primary/20"
+					/>
                 <h1 className="text-5xl md:text-7xl font-display font-bold">
-                    <span className="gradient-text">Marcos Vinícius</span>
+                    <span className="gradient-text">Vinícius Vieira</span>
                 </h1>
 
                 <h2 className="text-2xl md:text-4xl font-semibold text-muted-foreground">
@@ -26,11 +31,14 @@ export function HeroSection() {
                 </h2>
 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-                    5+ anos de experiência criando aplicações web modernas e escaláveis com{" "}
-                    <span className="text-primary font-semibold">React</span>,{" "}
+                   Sou Desenvolvedor Fullstack com 5 anos de experiência na área. Sou especializado em React.js no
+frontend e Node js com Typesript no backend, possuo experiência sólida no desenvolvimento sistemas
+web, integrações com gateways de pagamento, Iot e deploy de aplicações em cloud entre outras
+atividades.
+                    {/* <span className="text-primary font-semibold">React</span>,{" "}
                     <span className="text-secondary font-semibold">Next.js</span>,{" "}
                     <span className="text-accent font-semibold">Node.js</span> e{" "}
-                    <span className="text-primary font-semibold">PHP/Laravel</span>
+                    <span className="text-primary font-semibold">PHP/Laravel</span> */}
                 </p>
             </motion.div>
 
@@ -51,7 +59,7 @@ export function HeroSection() {
                     as="a"
                     href="#contact"
                 >
-                    Entre em Contato
+                    CV e Contato
                 </Button>
             </motion.div>
 

@@ -48,7 +48,7 @@ export default function AboutPage() {
 									<Briefcase className="w-6 h-6 text-primary" />
 								</div>
 								<h3 className="text-3xl font-bold text-primary mb-1">
-									{yearsOfExperience}+
+									{yearsOfExperience - 1}+
 								</h3>
 								<p className="text-sm text-muted-foreground">Anos de Experiência</p>
 							</CardBody>

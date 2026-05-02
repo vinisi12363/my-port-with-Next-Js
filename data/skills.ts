@@ -80,13 +80,6 @@ export const skills: Skill[] = [
         proficiency: 4
     },
  
-    {
-        name: 'Responsive Design',
-        description: 'Mobile-first responsive layouts',
-        icon: 'https://skillicons.dev/icons?i=css',
-        category: 'frontend',
-        proficiency: 5
-    },
 
     // Backend
     {
@@ -103,10 +96,10 @@ export const skills: Skill[] = [
         category: 'backend',
         proficiency: 5
     },
-    {
-        name: 'PHP',
-        description: 'Server-side scripting language',
-        icon: 'https://skillicons.dev/icons?i=php',
+      {
+        name: 'NestJS',
+        description: 'Node.js framework for building scalable server-side applications.',
+        icon: 'https://skillicons.dev/icons?i=nestjs',
         category: 'backend',
         proficiency: 5
     },
@@ -158,9 +151,16 @@ export const skills: Skill[] = [
     },
   
     {
-        name: 'AWS S3',
-        description: 'Cloud storage service',
+        name: 'AWS',
+        description: 'Cloud Services',
         icon: 'https://skillicons.dev/icons?i=aws',
+        category: 'tools',
+        proficiency: 4
+    },
+     {
+        name: 'Cloudflare',
+        description: 'Cloudflare CDN and services',
+        icon: 'https://skillicons.dev/icons?i=cloudflare',
         category: 'tools',
         proficiency: 4
     },
@@ -172,19 +172,26 @@ export const skills: Skill[] = [
         proficiency: 4
     },
     {
-        name: 'Cloud Databases',
-        description: 'Managed database services',
-        icon: 'https://skillicons.dev/icons?i=cloudflare',
-        category: 'tools',
-        proficiency: 4
-    },
-    {
         name: 'Jest',
         description: 'JavaScript testing framework',
         icon: 'https://skillicons.dev/icons?i=jest',
         category: 'tools',
         proficiency: 4
-    }
+    },
+    {
+        name: 'Grafana',
+        description: 'Observability platform',
+        icon: 'https://skillicons.dev/icons?i=grafana',
+        category: 'tools',
+        proficiency: 4
+    },
+    {
+        name: 'Prometheus',
+        description: 'Observability platform',
+        icon: 'https://skillicons.dev/icons?i=prometheus',
+        category: 'tools',
+        proficiency: 4
+    },
 ];
 
 export const getSkillsByCategory = (category: Skill['category']) =>
