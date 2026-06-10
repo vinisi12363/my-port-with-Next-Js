@@ -12,8 +12,11 @@ import { Chip } from "@nextui-org/chip";
 import { ArrowRight, Eye } from "lucide-react";
 import Link from "next/link";
 import { ProjectModal } from "@/components/project-modal";
+import { useLang } from "@/i18n/LanguageProvider";
+import { tx } from "@/i18n/config";
 
 export function ProjectsSection() {
+    const { t, lang } = useLang();
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -46,10 +49,10 @@ export function ProjectsSection() {
                         className="text-center mb-12"
                     >
                         <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                            <span className="gradient-text">Projetos em Destaque</span>
+                            <span className="gradient-text">{t.projects.title}</span>
                         </h2>
                         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Alguns dos projetos mais importantes que desenvolvi ao longo da minha carreira
+                            {t.projects.subtitle}
                         </p>
                     </motion.div>
 
@@ -69,7 +72,7 @@ export function ProjectsSection() {
                                     <CardHeader className="pb-0 pt-4 px-4 flex-col items-start">
                                         <div className="w-full aspect-video relative overflow-hidden rounded-lg mb-3">
                                             <Image
-                                                alt={project.title}
+                                                alt={tx(project.title, lang)}
                                                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                                                 src={project.images.thumbnail}
                                                 removeWrapper
@@ -78,18 +81,18 @@ export function ProjectsSection() {
                                             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                                 <div className="flex items-center gap-2 text-white font-medium">
                                                     <Eye className="w-5 h-5" />
-                                                    Ver Estudo de Caso
+                                                    {t.projects.caseStudyHover}
                                                 </div>
                                             </div>
                                         </div>
-                                        <h3 className="font-bold text-xl">{project.title}</h3>
+                                        <h3 className="font-bold text-xl">{tx(project.title, lang)}</h3>
                                         {project.client && (
                                             <p className="text-sm text-muted-foreground">{project.client}</p>
                                         )}
                                     </CardHeader>
                                     <CardBody className="py-3 px-4">
                                         <p className="text-sm text-muted-foreground line-clamp-3">
-                                            {project.description}
+                                            {tx(project.description, lang)}
                                         </p>
                                         <div className="flex flex-wrap gap-2 mt-3">
                                             {project.technologies.slice(0, 4).map((tech) => (
@@ -125,7 +128,7 @@ export function ProjectsSection() {
                             endContent={<ArrowRight className="w-5 h-5" />}
                             className="font-semibold"
                         >
-                            Outros Projetos
+                            {t.projects.otherProjects}
                         </Button>
                     </motion.div>
                 </div>

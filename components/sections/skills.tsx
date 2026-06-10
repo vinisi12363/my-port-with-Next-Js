@@ -7,6 +7,8 @@ import { frontendSkills, backendSkills, databaseSkills, toolsSkills } from "@/da
 import { Image } from "@nextui-org/image";
 import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/react";
 import { Button } from "@nextui-org/button";
+import { useLang } from "@/i18n/LanguageProvider";
+import { tx } from "@/i18n/config";
 
 interface SkillCategoryProps {
     title: string;
@@ -14,6 +16,7 @@ interface SkillCategoryProps {
 }
 
 function SkillCategory({ title, skills }: SkillCategoryProps) {
+    const { lang } = useLang();
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -51,7 +54,7 @@ function SkillCategory({ title, skills }: SkillCategoryProps) {
                                 <div className="px-1 py-2">
                                     <div className="text-small font-bold">{skill.name}</div>
                                     <div className="text-tiny text-muted-foreground">
-                                        {skill.description}
+                                        {tx(skill.description, lang)}
                                     </div>
                                 </div>
                             </PopoverContent>
@@ -64,6 +67,7 @@ function SkillCategory({ title, skills }: SkillCategoryProps) {
 }
 
 export function SkillsSection() {
+    const { t } = useLang();
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -80,18 +84,18 @@ export function SkillsSection() {
                     className="text-center mb-12"
                 >
                     <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                        <span className="gradient-text">Tecnologias & Habilidades</span>
+                        <span className="gradient-text">{t.skills.title}</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Ferramentas e tecnologias que domino para criar soluções completas
+                        {t.skills.subtitle}
                     </p>
                 </motion.div>
 
                 <div className="grid gap-12 md:grid-cols-2">
-                    <SkillCategory title="Frontend" skills={frontendSkills} />
-                    <SkillCategory title="Backend" skills={backendSkills} />
-                    <SkillCategory title="Databases" skills={databaseSkills} />
-                    <SkillCategory title="Tools & DevOps" skills={toolsSkills} />
+                    <SkillCategory title={t.skills.frontend} skills={frontendSkills} />
+                    <SkillCategory title={t.skills.backend} skills={backendSkills} />
+                    <SkillCategory title={t.skills.databases} skills={databaseSkills} />
+                    <SkillCategory title={t.skills.tools} skills={toolsSkills} />
                 </div>
             </div>
         </section>

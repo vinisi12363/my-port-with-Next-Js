@@ -7,8 +7,11 @@ import { experiences } from "@/data/experience";
 import { Card, CardBody } from "@nextui-org/card";
 import { Chip } from "@nextui-org/chip";
 import { Briefcase, Calendar } from "lucide-react";
+import { useLang } from "@/i18n/LanguageProvider";
+import { tx } from "@/i18n/config";
 
 export function ExperienceSection() {
+    const { t, lang } = useLang();
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -25,10 +28,10 @@ export function ExperienceSection() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                        <span className="gradient-text">Experiência Profissional</span>
+                        <span className="gradient-text">{t.experience.title}</span>
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Minha trajetória como desenvolvedor fullstack
+                        {t.experience.subtitle}
                     </p>
                 </motion.div>
 
@@ -53,7 +56,7 @@ export function ExperienceSection() {
                                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                                         <div>
                                             <h3 className="text-2xl font-bold text-foreground">
-                                                {exp.position}
+                                                {tx(exp.position, lang)}
                                             </h3>
                                             <p className="text-lg text-primary font-semibold">
                                                 {exp.company}
@@ -64,21 +67,21 @@ export function ExperienceSection() {
                                             <span className="text-sm">{exp.period}</span>
                                             {exp.current && (
                                                 <Chip size="sm" color="success" variant="flat">
-                                                    Atual
+                                                    {t.experience.current}
                                                 </Chip>
                                             )}
                                         </div>
                                     </div>
 
-                                    <p className="text-muted-foreground mb-4">{exp.description}</p>
+                                    <p className="text-muted-foreground mb-4">{tx(exp.description, lang)}</p>
 
-                                    {exp.achievements && exp.achievements.length > 0 && (
+                                    {exp.achievements && tx(exp.achievements, lang).length > 0 && (
                                         <div className="mb-4">
                                             <h4 className="font-semibold text-sm text-foreground mb-2">
-                                                Principais Conquistas:
+                                                {t.experience.achievements}
                                             </h4>
                                             <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                                                {exp.achievements.map((achievement, i) => (
+                                                {tx(exp.achievements, lang).map((achievement, i) => (
                                                     <li key={i}>{achievement}</li>
                                                 ))}
                                             </ul>

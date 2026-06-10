@@ -12,8 +12,11 @@ import { Chip } from "@nextui-org/chip";
 import { ArrowLeft, Eye } from "lucide-react";
 import Link from "next/link";
 import { ProjectModal } from "@/components/project-modal";
+import { useLang } from "@/i18n/LanguageProvider";
+import { tx } from "@/i18n/config";
 
 export default function ProjetosPage() {
+    const { t, lang } = useLang();
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -51,14 +54,14 @@ export default function ProjetosPage() {
                             startContent={<ArrowLeft className="w-4 h-4" />}
                             className="mb-6"
                         >
-                            Voltar ao Início
+                            {t.projectsPage.back}
                         </Button>
 
                         <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                            <span className="gradient-text">Casos de Sucesso</span>
+                            <span className="gradient-text">{t.projectsPage.title}</span>
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-2xl">
-                            Conheça alguns projetos de sucesso que desenvolvi, os que estão listados aqui foram os mais desafiadores e gratificantes que tive a oportunidade de desenvolver.
+                            {t.projectsPage.subtitle}
                         </p>
                     </motion.div>
 
@@ -79,7 +82,7 @@ export default function ProjetosPage() {
                                     <CardHeader className="pb-0 pt-4 px-4 flex-col items-start">
                                         <div className="w-full aspect-video relative overflow-hidden rounded-lg mb-3">
                                             <Image
-                                                alt={project.title}
+                                                alt={tx(project.title, lang)}
                                                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                                                 src={project.images.thumbnail}
                                                 removeWrapper
@@ -88,15 +91,15 @@ export default function ProjetosPage() {
                                             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                                 <div className="flex items-center gap-2 text-white font-medium">
                                                     <Eye className="w-5 h-5" />
-                                                    Ver Estudo de Caso
+                                                    {t.projects.caseStudyHover}
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-2 mb-2">
-                                            <h3 className="font-bold text-xl">{project.title}</h3>
+                                            <h3 className="font-bold text-xl">{tx(project.title, lang)}</h3>
                                             {project.featured && (
                                                 <Chip size="sm" color="secondary" variant="flat">
-                                                    Destaque
+                                                    {t.projectsPage.featured}
                                                 </Chip>
                                             )}
                                         </div>
@@ -106,7 +109,7 @@ export default function ProjetosPage() {
                                     </CardHeader>
                                     <CardBody className="py-3 px-4">
                                         <p className="text-sm text-muted-foreground line-clamp-3">
-                                            {project.description}
+                                            {tx(project.description, lang)}
                                         </p>
                                         <div className="flex flex-wrap gap-2 mt-3">
                                             {project.technologies.slice(0, 4).map((tech) => (

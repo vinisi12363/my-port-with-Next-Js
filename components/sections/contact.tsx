@@ -6,8 +6,11 @@ import { fadeInUp } from "@/lib/animations";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { Mail, Phone, Github, Linkedin, FileDown } from "lucide-react";
+import { useLang } from "@/i18n/LanguageProvider";
+import { CV_HREF } from "@/i18n/config";
 
 export function ContactSection() {
+    const { t, lang } = useLang();
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -24,10 +27,10 @@ export function ContactSection() {
                     className="text-center"
                 >
                     <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                        <span className="gradient-text">Vamos Trabalhar Juntos?</span>
+                        <span className="gradient-text">{t.contact.title}</span>
                     </h2>
                     <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-                        Estou sempre aberto a novos projetos e oportunidades. Entre em contato!
+                        {t.contact.subtitle}
                     </p>
 
                     {/* Contact methods */}
@@ -40,7 +43,7 @@ export function ContactSection() {
                                 <Mail className="w-6 h-6 text-primary" />
                             </div>
                             <div>
-                                <h3 className="font-semibold text-foreground">Email</h3>
+                                <h3 className="font-semibold text-foreground">{t.contact.email}</h3>
                                 <p className="text-sm text-muted-foreground">
                                     viniciuspv.si@gmail.com
                                 </p>
@@ -56,7 +59,7 @@ export function ContactSection() {
                                 <Phone className="w-6 h-6 text-secondary" />
                             </div>
                             <div>
-                                <h3 className="font-semibold text-foreground">WhatsApp</h3>
+                                <h3 className="font-semibold text-foreground">{t.contact.whatsapp}</h3>
                                 <p className="text-sm text-muted-foreground">
                                     +55 73 98825-1737
                                 </p>
@@ -89,14 +92,14 @@ export function ContactSection() {
                         </Button>
                         <Button
                             as={Link}
-                            href="/CV-Marcos-Vinicius-Fullstack.pdf"
+                            href={CV_HREF[lang]}
                             download
                             variant="bordered"
                             color="secondary"
                             startContent={<FileDown className="w-5 h-5" />}
                             className="font-semibold"
                         >
-                            Download CV
+                            {t.contact.downloadCv}
                         </Button>
                     </div>
                 </motion.div>

@@ -9,6 +9,8 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { ExternalLink, Target, Lightbulb, Calendar, Building2, Layers, ChevronLeft, ChevronRight } from "lucide-react";
 import { Project } from "@/data/projects";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLang } from "@/i18n/LanguageProvider";
+import { tx } from "@/i18n/config";
 
 interface ProjectModalProps {
     project: Project | null;
@@ -17,6 +19,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
+    const { t, lang } = useLang();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     if (!project) return null;
@@ -79,7 +82,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         <ModalHeader className="flex flex-col gap-1 pt-6">
                             <div className="flex items-center gap-3 flex-wrap">
                                 <h2 className="text-2xl md:text-3xl font-display font-bold">
-                                    <span className="gradient-text">{project.title}</span>
+                                    <span className="gradient-text">{tx(project.title, lang)}</span>
                                 </h2>
                                 {project.featured && (
                                     <Chip
@@ -90,7 +93,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                             content: "text-white font-semibold",
                                         }}
                                     >
-                                        ⭐ Destaque
+                                        {t.projectModal.featured}
                                     </Chip>
                                 )}
                             </div>
@@ -134,7 +137,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                                 className="absolute inset-0"
                                             >
                                                 <Image
-                                                    alt={`${project.title} - Imagem ${currentImageIndex + 1}`}
+                                                    alt={`${tx(project.title, lang)} - ${currentImageIndex + 1}`}
                                                     src={images[currentImageIndex]}
                                                     className="object-cover w-full h-full"
                                                     removeWrapper
@@ -216,7 +219,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
                                                 title={
                                                     <div className="flex flex-col">
-                                                        <span className="text-red-400">O Desafio</span>
+                                                        <span className="text-red-400">{t.projectModal.challengeTitle}</span>
 
                                                     </div>
                                                 }
@@ -224,8 +227,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                                 {/* Decorative gradient orb */}
                                                 <div className="absolute -top-8 -right-8 w-24 h-24 bg-red-500/20 rounded-full blur-2xl pointer-events-none" />
                                                 <p className="relative z-10">
-                                                    {project.caseStudy?.challenge ||
-                                                        "Este projeto apresentou desafios únicos que exigiram uma abordagem criativa e técnica."}
+                                                    {project.caseStudy
+                                                        ? tx(project.caseStudy.challenge, lang)
+                                                        : t.projectModal.challengeFallback}
                                                 </p>
                                             </AccordionItem>
 
@@ -239,7 +243,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
 
                                                 title={
                                                     <div className="flex flex-col">
-                                                        <span className="text-green-400">Minha Solução</span>
+                                                        <span className="text-green-400">{t.projectModal.solutionTitle}</span>
 
                                                     </div>
                                                 }
@@ -247,8 +251,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                                 {/* Decorative gradient orb */}
                                                 <div className="absolute -top-8 -left-8 w-24 h-24 bg-green-500/20 rounded-full blur-2xl pointer-events-none" />
                                                 <p className="relative z-10">
-                                                    {project.caseStudy?.solution ||
-                                                        "Desenvolvi uma solução robusta utilizando as melhores práticas de desenvolvimento."}
+                                                    {project.caseStudy
+                                                        ? tx(project.caseStudy.solution, lang)
+                                                        : t.projectModal.solutionFallback}
                                                 </p>
                                             </AccordionItem>
                                         </Accordion>
@@ -262,9 +267,9 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                     transition={{ delay: 0.3 }}
                                     className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6"
                                 >
-                                    <h3 className="font-display font-bold text-lg mb-3">Descrição da Experiência</h3>
+                                    <h3 className="font-display font-bold text-lg mb-3">{t.projectModal.descriptionTitle}</h3>
                                     <p className="text-muted-foreground leading-relaxed">
-                                        {project.longDescription}
+                                        {tx(project.longDescription, lang)}
                                     </p>
                                 </motion.div>
                             </div>
@@ -314,7 +319,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                                         endContent={<ExternalLink className="w-4 h-4" />}
                                         className="font-semibold bg-gradient-to-r from-primary to-purple-600 shadow-lg shadow-primary/25"
                                     >
-                                        Visualizar
+                                        {t.projectModal.view}
                                     </Button>
                                 )}
                             </div>

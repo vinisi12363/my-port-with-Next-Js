@@ -7,8 +7,10 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 import { Content } from "./content";
 import { getTotalYearsOfExperience } from "@/data/experience";
 import { Briefcase, Code, Rocket } from "lucide-react";
+import { useLang } from "@/i18n/LanguageProvider";
 
 export default function AboutPage() {
+	const { t } = useLang();
 	const yearsOfExperience = getTotalYearsOfExperience();
 
 	return (
@@ -25,14 +27,14 @@ export default function AboutPage() {
 					className="text-center mb-12"
 				>
 					<Avatar
-						src="/eu_1.jpeg"
-						className="w-32 h-32 md:w-40 md:h-40 text-large mx-auto mb-6 ring-4 ring-primary/20"
+						src="/eu4.jpg"
+						className="w-[147px] h-[147px] md:w-[184px] md:h-[184px] text-large mx-auto mb-6 ring-4 ring-primary/20"
 					/>
 					<h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-						<span className="gradient-text">Sobre Mim</span>
+						<span className="gradient-text">{t.about.title}</span>
 					</h1>
 					<p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-						Desenvolvedor Fullstack com experiência sólida em resolver problemas 😎 💅🏻
+						{t.about.tagline}
 					</p>
 				</motion.div>
 
@@ -50,7 +52,7 @@ export default function AboutPage() {
 								<h3 className="text-3xl font-bold text-primary mb-1">
 									{yearsOfExperience - 1}+
 								</h3>
-								<p className="text-sm text-muted-foreground">Anos de Experiência</p>
+								<p className="text-sm text-muted-foreground">{t.about.statsYears}</p>
 							</CardBody>
 						</Card>
 					</motion.div>
@@ -62,7 +64,7 @@ export default function AboutPage() {
 									<Code className="w-6 h-6 text-secondary" />
 								</div>
 								<h3 className="text-3xl font-bold text-secondary mb-1">20+</h3>
-								<p className="text-sm text-muted-foreground">Tecnologias</p>
+								<p className="text-sm text-muted-foreground">{t.about.statsTech}</p>
 							</CardBody>
 						</Card>
 					</motion.div>
@@ -74,7 +76,7 @@ export default function AboutPage() {
 									<Rocket className="w-6 h-6 text-accent" />
 								</div>
 								<h3 className="text-3xl font-bold text-accent mb-1">40+</h3>
-								<p className="text-sm text-muted-foreground">Projetos Entregues</p>
+								<p className="text-sm text-muted-foreground">{t.about.statsProjects}</p>
 							</CardBody>
 						</Card>
 					</motion.div>

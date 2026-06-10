@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
@@ -20,7 +22,16 @@ import {
 
 import { Logo } from "@/components/icons";
 import { LanguageSelector } from "./LanguageComponent";
+import { useLang } from "@/i18n/LanguageProvider";
+
 export const Navbar = () => {
+	const { t } = useLang();
+
+	const navItems = [
+		{ label: t.nav.home, href: "/" },
+		{ label: t.nav.about, href: "/about" },
+		{ label: t.nav.contact, href: "/contact" },
+	];
 
 	return (
 		<NextUINavbar maxWidth="xl" position="sticky">
@@ -32,7 +43,7 @@ export const Navbar = () => {
 					</NextLink>
 				</NavbarBrand>
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
-					{siteConfig.navItems.map((item) => (
+					{navItems.map((item) => (
 						<NavbarItem key={item.href}>
 							<NextLink
 								className={clsx(
@@ -53,40 +64,35 @@ export const Navbar = () => {
 				className="hidden sm:flex basis-1/5 sm:basis-full"
 				justify="end"
 			>
-				<NavbarItem className="hidden sm:flex gap-2">
+				<NavbarItem className="hidden sm:flex gap-2 items-center">
 					<Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
 						<LinkedinIcon className="text-default-500" />
 					</Link>
-			
+
 					<Link isExternal href={siteConfig.links.github} aria-label="Github">
 						<GithubIcon className="text-default-500" />
 					</Link>
 					<ThemeSwitch />
-					
+					<LanguageSelector />
 				</NavbarItem>
-				
-			
 			</NavbarContent>
 
-			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+			<NavbarContent className="sm:hidden basis-1 pl-4 gap-2" justify="end">
+				<LanguageSelector />
 				<Link isExternal href={siteConfig.links.github} aria-label="Github">
 					<GithubIcon className="text-default-500" />
 				</Link>
 				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
-		
 
 			<NavbarMenu>
-				
 				<div className="mx-4 mt-2 flex flex-col gap-2">
-					{siteConfig.navMenuItems.map((item, index) => (
-						<NavbarMenuItem key={`${item}-${index}`}>
+					{navItems.map((item, index) => (
+						<NavbarMenuItem key={`${item.href}-${index}`}>
 							<Link
-								color={
-									"foreground"
-								}
-								href={siteConfig.navMenuItems[index].href}
+								color={"foreground"}
+								href={item.href}
 								size="lg"
 							>
 								{item.label}
