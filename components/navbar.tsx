@@ -92,12 +92,6 @@ export const Navbar = () => {
 				justify="end"
 			>
 				<NavbarItem className="hidden sm:flex gap-3 items-center">
-					<Link isExternal href={siteConfig.links.linkedin} aria-label="Linkedin">
-						<LinkedinIcon className="text-cmuted hover:text-cprimary transition-colors" />
-					</Link>
-					<Link isExternal href={siteConfig.links.github} aria-label="Github">
-						<GithubIcon className="text-cmuted hover:text-cprimary transition-colors" />
-					</Link>
 					<ThemeSwitch />
 					<LanguageSelector />
 				</NavbarItem>
@@ -105,9 +99,6 @@ export const Navbar = () => {
 
 			<NavbarContent className="sm:hidden basis-1 pl-4 gap-2" justify="end">
 				<LanguageSelector />
-				<Link isExternal href={siteConfig.links.github} aria-label="Github">
-					<GithubIcon className="text-cmuted hover:text-cprimary transition-colors" />
-				</Link>
 				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>

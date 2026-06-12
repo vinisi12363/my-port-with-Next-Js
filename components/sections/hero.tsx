@@ -24,33 +24,24 @@ export function HeroSection() {
     };
 
     return (
-        <section className="min-h-screen flex items-center justify-center relative bg-cbg pt-24">
+        <section className="min-h-screen flex items-center justify-center relative isolate bg-cbg ">
             {/* Grid Background */}
             <div className="absolute inset-0 grid-bg opacity-30" />
 
-            <div className="w-full px-5 sm:px-8 lg:px-16 py-20 relative z-10">
+            {/* Giant rotating Code2 watermark */}
+            <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 flex items-center justify-center pointer-events-none -z-10"
+                aria-hidden
+            >
+                <Code2 className="text-cprimary/20 w-[120vmin] h-[120vmin]" />
+            </motion.div>
+
+            <div className="w-full px-5 sm:px-8 lg:px-16 py-4 relative z-10">
                 <div className="max-w-[1700px] mx-auto flex items-stretch gap-12">
                     {/* LEFT: text */}
                     <div className="flex-1 min-w-0">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            className="mb-6"
-                        >
-                            <div className="flex items-center gap-2 mb-4">
-                                <motion.div
-                                    animate={{ rotate: 360 }}
-                                    transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                                >
-                                    <Code2 className="text-cprimary" size={24} />
-                                </motion.div>
-                                <span className="font-mono text-sm text-cmuted">
-                                    {"// "}{t.hero.role}
-                                </span>
-                            </div>
-                        </motion.div>
-
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}

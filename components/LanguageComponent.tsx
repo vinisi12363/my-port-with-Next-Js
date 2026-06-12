@@ -16,7 +16,7 @@ export const LanguageSelector = () => {
         <div
             role="radiogroup"
             aria-label="Idioma / Language"
-            className="inline-flex items-center rounded-full border border-default-200 bg-default-100/60 p-0.5 backdrop-blur"
+            className="inline-flex items-center rounded border border-cborder2 bg-cborder/60 p-0.5 backdrop-blur"
         >
             {OPTIONS.map((option) => {
                 const isActive = lang === option.value;
@@ -27,10 +27,10 @@ export const LanguageSelector = () => {
                         role="radio"
                         aria-checked={isActive}
                         onClick={() => setLang(option.value)}
-                        className={`rounded-full px-3 py-1 text-xs font-semibold transition-colors ${
+                        className={`rounded px-3 py-1 text-xs font-mono font-semibold transition-colors ${
                             isActive
-                                ? "bg-gradient-to-r from-primary to-secondary text-white shadow-sm"
-                                : "text-default-500 hover:text-foreground"
+                                ? "bg-cprimary text-cbg"
+                                : "text-cmuted hover:text-cheading"
                         }`}
                     >
                         {option.label}

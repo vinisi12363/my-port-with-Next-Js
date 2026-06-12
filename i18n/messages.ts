@@ -8,7 +8,7 @@ const pt = {
     },
     hero: {
         role: "Desenvolvedor Fullstack",
-        bio: "Desenvolvedor Full Stack com mais de 4 anos de experiência em construção de sistemas web, APIs de alta performance e arquiteturas distribuídas orientadas a microsserviços. Forte atuação com Node.js e TypeScript no backend, com vivência prática em mensageria assíncrona (RabbitMQ, Kafka, AWS SQS/SNS), conteinerização (Docker, Kubernetes) e ambientes cloud AWS. Experiência com React.js e Next.js no desenvolvimento de sistemas web em produção. Comprometido com qualidade de código via Clean Code, SOLID, TDD e revisões colaborativas, com observabilidade garantida por OpenTelemetry, Prometheus e Grafana.",
+        bio: "Com mais de 4 anos de experiência em construção de sistemas web, APIs de alta performance e arquiteturas distribuídas orientadas a microsserviços. Forte atuação com Node.js e TypeScript no backend, com vivência prática em mensageria assíncrona (RabbitMQ, Kafka, AWS SQS/SNS), conteinerização (Docker, Kubernetes) e ambientes cloud AWS. Experiência com React.js e Next.js no desenvolvimento de sistemas web em produção. Comprometido com qualidade de código via Clean Code, SOLID, TDD e revisões colaborativas, com observabilidade garantida por OpenTelemetry, Prometheus e Grafana.",
         ctaProjects: "Ver Projetos",
         ctaContact: "CV e Contato",
         scroll: "Role para baixo",
@@ -93,7 +93,7 @@ const en: typeof pt = {
     },
     hero: {
         role: "Fullstack Developer",
-        bio: "Full Stack Developer with over 4 years of experience building web systems, high-performance APIs and distributed microservice-oriented architectures. Strong background with Node.js and TypeScript on the backend, with hands-on experience in asynchronous messaging (RabbitMQ, Kafka, AWS SQS/SNS), containerization (Docker, Kubernetes) and AWS cloud environments. Experience with React.js and Next.js building production web systems. Committed to code quality through Clean Code, SOLID, TDD and collaborative reviews, with observability ensured by OpenTelemetry, Prometheus and Grafana.",
+        bio: "With over 4 years of experience building web systems, high-performance APIs and distributed microservice-oriented architectures. Strong background with Node.js and TypeScript on the backend, with hands-on experience in asynchronous messaging (RabbitMQ, Kafka, AWS SQS/SNS), containerization (Docker, Kubernetes) and AWS cloud environments. Experience with React.js and Next.js building production web systems. Committed to code quality through Clean Code, SOLID, TDD and collaborative reviews, with observability ensured by OpenTelemetry, Prometheus and Grafana.",
         ctaProjects: "View Projects",
         ctaContact: "CV & Contact",
         scroll: "Scroll down",
