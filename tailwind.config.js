@@ -20,6 +20,18 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+  			/* Blue portfolio theme tokens (light/dark via CSS vars in globals.css) */
+  			cbg: 'rgb(var(--c-bg) / <alpha-value>)',
+  			'cbg-alt': 'rgb(var(--c-bg-alt) / <alpha-value>)',
+  			cborder: 'rgb(var(--c-border) / <alpha-value>)',
+  			cborder2: 'rgb(var(--c-border2) / <alpha-value>)',
+  			cdim: 'rgb(var(--c-dim) / <alpha-value>)',
+  			cmuted: 'rgb(var(--c-muted) / <alpha-value>)',
+  			csoft: 'rgb(var(--c-soft) / <alpha-value>)',
+  			cheading: 'rgb(var(--c-heading) / <alpha-value>)',
+  			cprimary: 'rgb(var(--c-primary) / <alpha-value>)',
+  			cprimary2: 'rgb(var(--c-primary2) / <alpha-value>)',
+  			cgradfrom: 'rgb(var(--c-grad-from) / <alpha-value>)',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

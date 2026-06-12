@@ -37,7 +37,20 @@
     --border: 240 5% 90%;
     --input: 240 5% 96%;
     --ring: 280 80% 55%;
-    
+
+    /* Blue portfolio theme — LIGHT (rgb channels, used as rgb(var(--x) / <alpha>)) */
+    --c-bg: 255 255 255;
+    --c-bg-alt: 232 240 252;
+    --c-border: 205 219 242;
+    --c-border2: 181 201 234;
+    --c-dim: 99 126 170;
+    --c-muted: 60 82 122;
+    --c-soft: 43 77 138;
+    --c-heading: 22 48 107;
+    --c-primary: 47 124 224;
+    --c-primary2: 31 99 192;
+    --c-grad-from: 123 176 245;
+
     --radius: 0.75rem;
     
     /* Premium Gradients */
@@ -78,7 +91,20 @@
     --border: 240 5% 20%;
     --input: 240 5% 20%;
     --ring: 280 100% 70%;
-    
+
+    /* Blue portfolio theme — DARK */
+    --c-bg: 10 15 26;
+    --c-bg-alt: 15 22 38;
+    --c-border: 30 43 69;
+    --c-border2: 39 55 90;
+    --c-dim: 91 123 180;
+    --c-muted: 138 166 212;
+    --c-soft: 169 197 240;
+    --c-heading: 207 224 251;
+    --c-primary: 79 156 249;
+    --c-primary2: 124 182 251;
+    --c-grad-from: 59 111 184;
+
     /* Premium Gradients for Dark Mode */
     --gradient-primary: linear-gradient(135deg, hsl(280, 100%, 70%) 0%, hsl(200, 100%, 60%) 100%);
     --gradient-secondary: linear-gradient(135deg, hsl(330, 100%, 65%) 0%, hsl(280, 100%, 70%) 100%);
@@ -93,11 +119,15 @@
   
   html {
     @apply scroll-smooth;
+    /* Fluid root size: everything in rem grows/shrinks proportionally with the viewport */
+    font-size: clamp(16px, 0.55vw + 12.5px, 22px);
+    overflow-x: hidden;
   }
-  
+
   body {
     @apply text-foreground font-sans antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -167,6 +197,14 @@
   /* Text Balance */
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Themed grid background for the hero (adapts to light/dark via --c-border) */
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgb(var(--c-border) / 0.6) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--c-border) / 0.6) 1px, transparent 1px);
+    background-size: 4rem 4rem;
   }
   
   /* Custom Scrollbar */

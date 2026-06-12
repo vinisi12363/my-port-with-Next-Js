@@ -2,14 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 import { projects, Project } from "@/data/projects";
-import { Image } from "@nextui-org/image";
-import { Card, CardHeader, CardBody } from "@nextui-org/card";
-import { Button } from "@nextui-org/button";
-import { Chip } from "@nextui-org/chip";
-import { ArrowLeft, Eye } from "lucide-react";
+import { Database, Zap, ArrowLeft, Eye } from "lucide-react";
 import Link from "next/link";
 import { ProjectModal } from "@/components/project-modal";
 import { useLang } from "@/i18n/LanguageProvider";
@@ -17,125 +11,127 @@ import { tx } from "@/i18n/config";
 
 export default function ProjetosPage() {
     const { t, lang } = useLang();
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
-
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleOpenModal = (project: Project) => {
+    const openModal = (project: Project) => {
         setSelectedProject(project);
         setIsModalOpen(true);
     };
 
-    const handleCloseModal = () => {
+    const closeModal = () => {
         setIsModalOpen(false);
         setSelectedProject(null);
     };
 
     return (
         <>
-            <main className="min-h-screen py-20 px-6">
-                <div className="max-w-7xl mx-auto">
-                    {/* Header com botão de voltar */}
-                    <motion.div
-                        ref={ref}
-                        variants={fadeInUp}
-                        initial="initial"
-                        animate={inView ? "animate" : "initial"}
-                        className="mb-12"
-                    >
-                        <Button
-                            as={Link}
-                            href="/"
-                            variant="light"
-                            startContent={<ArrowLeft className="w-4 h-4" />}
-                            className="mb-6"
+            <main className="min-h-screen bg-cbg py-20">
+                <div className="w-full px-5 sm:px-8 lg:px-16">
+                    <div className="max-w-[1700px] mx-auto">
+                        {/* Header */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="mb-12"
                         >
-                            {t.projectsPage.back}
-                        </Button>
+                            <Link
+                                href="/"
+                                className="inline-flex items-center gap-2 text-cmuted hover:text-cprimary font-mono text-sm mb-6 transition-colors"
+                            >
+                                <ArrowLeft size={16} />
+                                {t.projectsPage.back}
+                            </Link>
 
-                        <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                            <span className="gradient-text">{t.projectsPage.title}</span>
-                        </h1>
-                        <p className="text-lg text-muted-foreground max-w-2xl">
-                            {t.projectsPage.subtitle}
-                        </p>
-                    </motion.div>
+                            <h1 className="text-5xl md:text-7xl mb-3">
+                                <span className="text-cprimary font-mono text-2xl">~/</span>{" "}
+                                <span className="text-cheading font-semibold">
+                                    {t.projectsPage.title}
+                                </span>
+                            </h1>
+                            <div className="h-[2px] w-32 bg-cprimary mb-6" />
+                            <p className="text-lg text-cmuted max-w-3xl leading-relaxed">
+                                {t.projectsPage.subtitle}
+                            </p>
+                        </motion.div>
 
-                    {/* Grid de todos os projetos */}
-                    <motion.div
-                        variants={staggerContainer}
-                        initial="initial"
-                        animate={inView ? "animate" : "initial"}
-                        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-                    >
-                        {projects.map((project) => (
-                            <motion.div key={project.id} variants={staggerItem}>
-                                <Card
-                                    className="card-hover glass h-full group cursor-pointer"
-                                    isPressable
-                                    onPress={() => handleOpenModal(project)}
+                        {/* Grid */}
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {projects.map((project, index) => (
+                                <motion.div
+                                    key={project.id}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: (index % 3) * 0.1 }}
+                                    whileHover={{ y: -8 }}
+                                    onClick={() => openModal(project)}
+                                    className="group relative bg-cbg-alt border border-cborder rounded-lg overflow-hidden hover:border-cprimary transition-all cursor-pointer flex flex-col"
                                 >
-                                    <CardHeader className="pb-0 pt-4 px-4 flex-col items-start">
-                                        <div className="w-full aspect-video relative overflow-hidden rounded-lg mb-3">
-                                            <Image
-                                                alt={tx(project.title, lang)}
-                                                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                                    {/* Thumbnail */}
+                                    <div className="relative w-full aspect-video overflow-hidden bg-cbg">
+                                        {project.images?.thumbnail ? (
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img
                                                 src={project.images.thumbnail}
-                                                removeWrapper
+                                                alt={tx(project.title, lang)}
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                             />
-                                            {/* Overlay com ícone no hover */}
-                                            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                                <div className="flex items-center gap-2 text-white font-medium">
-                                                    <Eye className="w-5 h-5" />
-                                                    {t.projects.caseStudyHover}
-                                                </div>
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center">
+                                                <Database className="text-cborder" size={48} />
                                             </div>
-                                        </div>
-                                        <div className="flex items-center gap-2 mb-2">
-                                            <h3 className="font-bold text-xl">{tx(project.title, lang)}</h3>
-                                            {project.featured && (
-                                                <Chip size="sm" color="secondary" variant="flat">
-                                                    {t.projectsPage.featured}
-                                                </Chip>
-                                            )}
-                                        </div>
-                                        {project.client && (
-                                            <p className="text-sm text-muted-foreground">{project.client}</p>
                                         )}
-                                    </CardHeader>
-                                    <CardBody className="py-3 px-4">
-                                        <p className="text-sm text-muted-foreground line-clamp-3">
+                                        <div className="absolute inset-0 bg-cbg/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                            <span className="flex items-center gap-2 text-cprimary font-mono text-sm">
+                                                <Eye size={18} />
+                                                {t.projects.caseStudyHover}
+                                            </span>
+                                        </div>
+                                        {project.featured && (
+                                            <div className="absolute top-3 right-3 px-2 py-1 bg-cprimary text-cbg rounded text-xs font-mono flex items-center gap-1">
+                                                <Zap size={12} />
+                                                {t.projectsPage.featured}
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Body */}
+                                    <div className="p-5 flex flex-col flex-grow">
+                                        <h3 className="text-lg text-cheading font-mono mb-2 group-hover:text-cprimary transition-colors">
+                                            {tx(project.title, lang)}
+                                        </h3>
+                                        <p className="text-sm text-cmuted leading-relaxed line-clamp-3 mb-4 flex-grow">
                                             {tx(project.description, lang)}
                                         </p>
-                                        <div className="flex flex-wrap gap-2 mt-3">
+                                        <div className="flex flex-wrap gap-2">
                                             {project.technologies.slice(0, 4).map((tech) => (
-                                                <Chip key={tech} size="sm" variant="flat" color="primary">
+                                                <span
+                                                    key={tech}
+                                                    className="px-2 py-1 bg-cborder text-csoft rounded text-xs font-mono"
+                                                >
                                                     {tech}
-                                                </Chip>
+                                                </span>
                                             ))}
                                             {project.technologies.length > 4 && (
-                                                <Chip size="sm" variant="flat">
+                                                <span className="px-2 py-1 bg-cborder text-cdim rounded text-xs font-mono">
                                                     +{project.technologies.length - 4}
-                                                </Chip>
+                                                </span>
                                             )}
                                         </div>
-                                    </CardBody>
-                                </Card>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </main>
 
-            {/* Modal de Projeto */}
             <ProjectModal
                 project={selectedProject}
                 isOpen={isModalOpen}
-                onClose={handleCloseModal}
+                onClose={closeModal}
             />
         </>
     );

@@ -1,104 +1,147 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { fadeInUp, fadeInLeft, staggerContainer, staggerItem } from "@/lib/animations";
+import { Briefcase, GraduationCap } from "lucide-react";
 import { experiences } from "@/data/experience";
-import { Card, CardBody } from "@nextui-org/card";
-import { Chip } from "@nextui-org/chip";
-import { Briefcase, Calendar } from "lucide-react";
 import { useLang } from "@/i18n/LanguageProvider";
 import { tx } from "@/i18n/config";
 
+interface TimelineItem {
+    title: string;
+    subtitle: string;
+    period: string;
+    bullets: string[];
+    tags: string[];
+    current?: boolean;
+    isEducation?: boolean;
+}
+
 export function ExperienceSection() {
     const { t, lang } = useLang();
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
+
+    const items: TimelineItem[] = [
+        ...experiences.map((exp) => ({
+            title: tx(exp.position, lang),
+            subtitle: exp.company,
+            period: exp.period.trim(),
+            bullets: exp.achievements ? tx(exp.achievements, lang) : [],
+            tags: exp.technologies,
+            current: exp.current,
+        })),
+        {
+            title:
+                lang === "pt"
+                    ? "Bacharelado em Sistemas de Informação"
+                    : "Bachelor's in Information Systems",
+            subtitle:
+                lang === "pt"
+                    ? "Universidade Estadual do Sudoeste da Bahia (UESB)"
+                    : "State University of Southwest Bahia (UESB)",
+            period: "2013 - 2017",
+            bullets: [],
+            tags: [],
+            isEducation: true,
+        },
+    ];
 
     return (
-        <section id="experience" className="py-20 px-6">
-            <div className="max-w-5xl mx-auto">
+        <section id="experience" className="py-20 bg-cbg">
+            <div className="w-full px-5 sm:px-8 lg:px-16">
                 <motion.div
-                    ref={ref}
-                    variants={fadeInUp}
-                    initial="initial"
-                    animate={inView ? "animate" : "initial"}
-                    className="text-center mb-16"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="max-w-[1700px] mx-auto"
                 >
-                    <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-                        <span className="gradient-text">{t.experience.title}</span>
-                    </h2>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                        {t.experience.subtitle}
-                    </p>
-                </motion.div>
+                    <div className="mb-12">
+                        <h2 className="text-5xl md:text-6xl mb-3">
+                            <span className="text-cprimary font-mono text-xl">04.</span>{" "}
+                            <span className="text-cheading">
+                                {lang === "pt"
+                                    ? "Experiência & Formação"
+                                    : "Experience & Education"}
+                            </span>
+                        </h2>
+                        <div className="h-[2px] w-32 bg-cprimary" />
+                    </div>
 
-                <motion.div
-                    variants={staggerContainer}
-                    initial="initial"
-                    animate={inView ? "animate" : "initial"}
-                    className="relative space-y-8"
-                >
-                    {/* Timeline line */}
-                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent hidden md:block" />
+                    <h3 className="text-2xl text-csoft mb-8 font-mono flex items-center gap-3">
+                        <Briefcase className="text-cprimary" size={28} />
+                        {"// "}{t.experience.title}
+                    </h3>
 
-                    {experiences.map((exp, index) => (
-                        <motion.div key={exp.id} variants={staggerItem}>
-                            <Card className="glass card-hover relative md:ml-20">
-                                {/* Timeline dot */}
-                                <div className="absolute -left-12 top-8 w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary border-4 border-background hidden md:flex items-center justify-center">
-                                    <Briefcase className="w-4 h-4 text-white" />
-                                </div>
+                    <div className="relative">
+                        {/* Timeline Line */}
+                        <div className="absolute left-0 md:left-8 top-0 bottom-0 w-[2px] bg-cborder" />
 
-                                <CardBody className="p-6">
-                                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                                        <div>
-                                            <h3 className="text-2xl font-bold text-foreground">
-                                                {tx(exp.position, lang)}
-                                            </h3>
-                                            <p className="text-lg text-primary font-semibold">
-                                                {exp.company}
-                                            </p>
-                                        </div>
-                                        <div className="flex items-center gap-2 text-muted-foreground">
-                                            <Calendar className="w-4 h-4" />
-                                            <span className="text-sm">{exp.period}</span>
-                                            {exp.current && (
-                                                <Chip size="sm" color="success" variant="flat">
-                                                    {t.experience.current}
-                                                </Chip>
-                                            )}
-                                        </div>
+                        <div className="space-y-8">
+                            {items.map((item, index) => (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                    className="relative pl-8 md:pl-20"
+                                >
+                                    {/* Timeline Dot */}
+                                    <div className="absolute left-[-7px] md:left-[23px] top-2 w-[22px] h-[22px] bg-cbg rounded-full border-2 border-cprimary flex items-center justify-center">
+                                        {item.isEducation ? (
+                                            <GraduationCap className="text-cprimary" size={12} />
+                                        ) : (
+                                            <span className="w-2 h-2 bg-cprimary rounded-full" />
+                                        )}
                                     </div>
 
-                                    <p className="text-muted-foreground mb-4">{tx(exp.description, lang)}</p>
+                                    <div className="p-6 bg-cbg-alt border border-cborder rounded hover:border-cprimary transition-all group">
+                                        <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
+                                            <div>
+                                                <h4 className="text-xl text-cheading group-hover:text-cprimary transition-colors font-mono">
+                                                    {item.title}
+                                                </h4>
+                                                <p className="text-cmuted">{item.subtitle}</p>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                {item.current && (
+                                                    <span className="text-xs text-cbg font-mono bg-cprimary px-2 py-1 rounded">
+                                                        {t.experience.current}
+                                                    </span>
+                                                )}
+                                                <span className="text-sm text-cdim font-mono bg-cborder px-3 py-1 rounded">
+                                                    {item.period}
+                                                </span>
+                                            </div>
+                                        </div>
 
-                                    {exp.achievements && tx(exp.achievements, lang).length > 0 && (
-                                        <div className="mb-4">
-                                            <h4 className="font-semibold text-sm text-foreground mb-2">
-                                                {t.experience.achievements}
-                                            </h4>
-                                            <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                                                {tx(exp.achievements, lang).map((achievement, i) => (
-                                                    <li key={i}>{achievement}</li>
+                                        {item.bullets.length > 0 && (
+                                            <ul className="space-y-2 mb-4">
+                                                {item.bullets.map((bullet, i) => (
+                                                    <li key={i} className="text-cmuted flex gap-2">
+                                                        <span className="text-cprimary">▹</span>
+                                                        <span>{bullet}</span>
+                                                    </li>
                                                 ))}
                                             </ul>
-                                        </div>
-                                    )}
+                                        )}
 
-                                    <div className="flex flex-wrap gap-2">
-                                        {exp.technologies.map((tech) => (
-                                            <Chip key={tech} size="sm" variant="flat" color="secondary">
-                                                {tech}
-                                            </Chip>
-                                        ))}
+                                        {item.tags.length > 0 && (
+                                            <div className="flex flex-wrap gap-2">
+                                                {item.tags.map((tech) => (
+                                                    <span
+                                                        key={tech}
+                                                        className="px-2 py-1 bg-cborder text-csoft rounded text-xs font-mono"
+                                                    >
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
-                                </CardBody>
-                            </Card>
-                        </motion.div>
-                    ))}
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </section>
